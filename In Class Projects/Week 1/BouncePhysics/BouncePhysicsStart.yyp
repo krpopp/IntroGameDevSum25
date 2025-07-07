@@ -35,6 +35,8 @@
   },
   "name":"BouncePhysicsStart",
   "resources":[
+    {"id":{"name":"obj_burger","path":"objects/obj_burger/obj_burger.yy",},},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_b_dog","path":"sprites/spr_b_dog/spr_b_dog.yy",},},
     {"id":{"name":"spr_burger","path":"sprites/spr_burger/spr_burger.yy",},},
