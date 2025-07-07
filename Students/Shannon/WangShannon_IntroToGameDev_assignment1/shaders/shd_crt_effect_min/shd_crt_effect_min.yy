@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_crt_effect_min",
+  "name":"shd_crt_effect_min",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}
