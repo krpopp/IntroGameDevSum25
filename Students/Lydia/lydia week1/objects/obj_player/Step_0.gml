@@ -8,8 +8,7 @@ var going_left = false;
 var going_right = false;
 
 
-depth = -y;
-
+depth = -(y + 8);
 
 
 
