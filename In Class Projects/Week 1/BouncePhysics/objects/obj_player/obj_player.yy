@@ -39,10 +39,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_w_dog",
-    "path":"sprites/spr_w_dog/spr_w_dog.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

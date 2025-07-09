@@ -1,4 +1,3 @@
-
 y_vel += grav;
 
 x_vel *= 0.9;
@@ -23,6 +22,8 @@ while(to_move_y != 0) {
 		if(collideWith != noone) {
 			if(place_meeting(x, y, collideWith) == false) {
 				colliding = true;
+				//obj_player.x = 10;
+				//collideWith.x = 10;
 				collideWith.y_vel = max(0, collideWith.y_vel + 2);
 			}
 		} else {

@@ -1,17 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_1",
+  "eventList":[],
   "managed":true,
-  "name":"obj_star",
+  "name":"obj_player_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_player",
+    "path":"objects/obj_player/obj_player.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_star",
-    "path":"sprites/spr_star/spr_star.yy",
+    "name":"spr_w_dog",
+    "path":"sprites/spr_w_dog/spr_w_dog.yy",
   },
   "spriteMaskId":null,
   "visible":true,
