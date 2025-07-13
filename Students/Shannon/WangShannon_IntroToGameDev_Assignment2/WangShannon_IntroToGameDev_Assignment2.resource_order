@@ -18,8 +18,10 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_bottom_shadow","order":3,"path":"objects/obj_bottom_shadow/obj_bottom_shadow.yy",},
+    {"name":"obj_camera","order":4,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"obj_cloud_manager","order":2,"path":"objects/obj_cloud_manager/obj_cloud_manager.yy",},
     {"name":"obj_cloud","order":1,"path":"objects/obj_cloud/obj_cloud.yy",},
+    {"name":"obj_player_manager","order":5,"path":"objects/obj_player_manager/obj_player_manager.yy",},
     {"name":"bottom_shadow","order":3,"path":"sprites/bottom_shadow/bottom_shadow.yy",},
     {"name":"spr_cloud","order":2,"path":"sprites/spr_cloud/spr_cloud.yy",},
     {"name":"spr_player2","order":1,"path":"sprites/spr_player2/spr_player2.yy",},

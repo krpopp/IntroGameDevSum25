@@ -36,9 +36,11 @@
   "name":"WangShannon_IntroToGameDev_Assignment2",
   "resources":[
     {"id":{"name":"obj_bottom_shadow","path":"objects/obj_bottom_shadow/obj_bottom_shadow.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_cloud_manager","path":"objects/obj_cloud_manager/obj_cloud_manager.yy",},},
     {"id":{"name":"obj_cloud","path":"objects/obj_cloud/obj_cloud.yy",},},
-    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_player_manager","path":"objects/obj_player_manager/obj_player_manager.yy",},},
+    {"id":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"bottom_shadow","path":"sprites/bottom_shadow/bottom_shadow.yy",},},
     {"id":{"name":"spr_cloud","path":"sprites/spr_cloud/spr_cloud.yy",},},
