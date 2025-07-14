@@ -35,6 +35,8 @@
   },
   "name":"CardGameStart",
   "resources":[
+    {"id":{"name":"obj_card","path":"objects/obj_card/obj_card.yy",},},
+    {"id":{"name":"obj_dealer","path":"objects/obj_dealer/obj_dealer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_card_back","path":"sprites/spr_card_back/spr_card_back.yy",},},
     {"id":{"name":"spr_card_front","path":"sprites/spr_card_front/spr_card_front.yy",},},
