@@ -13,9 +13,11 @@ obj_player2.y = clamp(obj_player2.y, 0, room_height+70);
 
 
 if (!change_sprite){
-	obj_player1.sprite_index = spr_player1_up;
+	sprite_index = sprite_up;
+	//obj_player1.sprite_index = spr_player1_up;
 } else if(change_sprite){
-	obj_player1.sprite_index = spr_player1_down;
+	sprite_index = sprite_down;
+	//obj_player1.sprite_index = spr_player1_down;
 }
 
 //add velocity every frame
@@ -164,6 +166,28 @@ if (y >= room_height && y_vel >= 0) {
 	}
 }
 
+
+if (is_out_of_bounds) {
+	
+	respawn_timer--;
+	
+    if (respawn_timer <= 0) {
+     y = room_height + 60;
+        x = random_range(50, room_width-50); 
+        y_vel = - 40; //velocity when back to top
+        respawn_y = 300; //where on top
+		is_out_of_bounds = false;
+		is_kick = false;
+    }
+}
+
+
+if ( y_vel < 0 && y <= respawn_y) {
+    y = respawn_y;
+    y_vel = grav;
+}
+
+
 //if( y_vel > 0 &&  y == room_height - 30 && respawn_timer > 0){
 //	audio_play_sound(die,10,false);
 //		//i really don't know why the sparkles are not
@@ -177,27 +201,5 @@ if (y >= room_height && y_vel >= 0) {
 //					obj_sparkle);
 
 //}
-
-if (is_out_of_bounds) {
-	
-	respawn_timer--;
-	
-    if (respawn_timer <= 0) {
-     y = room_height + 60;
-        x = random_range(50, room_width-50); 
-        y_vel = - 40; //velocity when back to top
-        respawn_y = 300; //where on top
-		is_out_of_bounds = false;
-		is_kick = false;
-		
-    }
-}
-
-
-if ( y_vel < 0 && y <= respawn_y) {
-    y = respawn_y;
-    y_vel = grav;
-
-}
 
 

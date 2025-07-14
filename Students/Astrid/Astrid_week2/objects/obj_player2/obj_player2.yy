@@ -10,6 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"left_key","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"vk_left",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"right_key","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"vk_right",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"bounce_vel","path":"objects/obj_player/obj_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-10",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"sprite_up","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_player2_down","path":"sprites/spr_player2_down/spr_player2_down.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player2_down",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"sprite_down","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_player2_up","path":"sprites/spr_player2_up/spr_player2_up.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player2_up",},
   ],
   "parent":{
     "name":"Objects",

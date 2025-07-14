@@ -6,7 +6,10 @@
   ],
   "managed":true,
   "name":"obj_player1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"sprite_up","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_player1_down","path":"sprites/spr_player1_down/spr_player1_down.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player1_down",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"propertyId":{"name":"sprite_down","path":"objects/obj_player/obj_player.yy",},"resource":{"name":"spr_player1_up","path":"sprites/spr_player1_up/spr_player1_up.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_player1_up",},
+  ],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
