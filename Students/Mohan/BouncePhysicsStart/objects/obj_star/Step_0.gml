@@ -1,5 +1,4 @@
-// Step Event
-life -= 1;
-if (life <= 0) {
+cycle -= 1;
+if (cycle <= 0) {
     instance_destroy();
 }
