@@ -2,7 +2,7 @@ cloud_timer += 1;
 
 var cloud_count = instance_number(obj_cloud);
 
-if (cloud_timer > frames_between_clouds || cloud_count < min_clouds) {
+if (cloud_timer > cloud_frame || cloud_count < min_clouds) {
     if (cloud_count < max_clouds) {
         var spawn_x = random_range(30, room_width - 30);
         var spawn_y = random_range(50, room_height - 150);

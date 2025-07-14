@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"BouncePhysicsStart",
-    "path":"BouncePhysicsStart.yyp",
+    "name":"clone-assignment-2",
+    "path":"clone-assignment-2.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

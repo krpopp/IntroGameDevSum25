@@ -17,7 +17,7 @@ if (x_vel > 0) {
 }
 
 switch(state){
-    case "start":
+    case "spawn":
         born_timer++;
         if(born_timer >= 60){
             var spawn_x = (object_index == obj_green) ? room_width / 3 : room_width * 2 / 3;
