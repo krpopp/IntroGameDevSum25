@@ -1,0 +1,32 @@
+assignment 1
+
+this was easy to program but the assets were soooo annoying. it was just me zooming into the itch.io page and alt+tabbing from there to aseprite to reference
+it as closely as possible (looking at the bush and castle). everything else was fine though in terms of art
+
+i think the challenge was the animation, i never used gml to animate a full walk cycle before so i went with this weird approach of using arrays lol
+
+overall i think this assignment was pretty easy just a little tedious, so i tried to meticulously get as many details in as possible
+
+
+------
+
+assignment 2
+
+this assignment was so annoying to code. i never actually used inheritance in gml so i had to use a lot of open sources and learned that "self" is actually
+useful
+
+also the clouds were so tedious and annoying. that stuff was like 20+ frames or something. i screenrecorded a video and went frame by frame in to closely reference
+each frame because the animation was too fast for me to process. like i have pixel art premium (aseprite) and im still complaining i can't imagine how hard it is
+using gamemaker editor rip
+
+halfway through i realized i made my room too small which could be easily fixed with a few adjustments here and there (and i had to go on aseprite and resize
+the bottom shadow) but it wasn't a relevant detail so i let it slide
+
+i've used particles like 4 times in my life so i thought i was familiar enough with it, but this time i had to copy something to try get a super close particle
+feel. it wasn't as hard as i thought and i managed to get it after a few tries so that's awesome i'm starting to like particles
+
+
+
+
+
+
