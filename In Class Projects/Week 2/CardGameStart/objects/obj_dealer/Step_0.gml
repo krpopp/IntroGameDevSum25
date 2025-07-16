@@ -54,6 +54,7 @@ switch(state) {
 	        _next_card.target_x = room_width * 0.8;
 	        _next_card.target_y = y - ds_list_size(discard);
 	        _next_card.face_up = false;
+			_next_card.in_player_hand = false;
 	    }
 	    else
 	    {
