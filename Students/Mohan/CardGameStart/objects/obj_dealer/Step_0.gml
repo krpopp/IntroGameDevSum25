@@ -1,33 +1,57 @@
 switch(state) {
 	case STATES.DEAL:
-	    deal_timer++;
+    deal_timer++;
 
-	    if (deal_timer >= deal_interval) {
-	        deal_timer = 0;
+    if (deal_timer >= deal_interval) {
+        deal_timer = 0;
 
-	        var _player_card_num = ds_list_size(player_hand);
+        // Deal opponent first
+        if (ds_list_size(opponent_hand) < 3) {
+            var index = ds_list_size(opponent_hand);
+            var card = ds_list_find_value(deck, ds_list_size(deck) - 1);
+            ds_list_delete(deck, ds_list_size(deck) - 1);
+            ds_list_add(opponent_hand, card);
 
-	        if (_player_card_num < 3) {
-	            var _dealt_card = ds_list_find_value(deck, ds_list_size(deck) - 1);
-	            ds_list_delete(deck, ds_list_size(deck) - 1);
-	            ds_list_add(player_hand, _dealt_card);
+            var target_y = room_height * 0.1;
+            var target_x = room_width * 0.45 + (index - 1) * 110;
 
-	            //_dealt_card.x = 100;
-	            //_dealt_card.y = room_height * 0.8;
+            card.x = 40;
+            card.y = room_height * 0.4; // deck start (middle-left)
+            card.target_x = target_x;
+            card.target_y = target_y;
+            card.base_y = target_y;
 
-	            _dealt_card.target_x = room_width * 0.45 + (_player_card_num - 1) * 110;
-	            _dealt_card.target_y = room_height * 0.7;
+            card.in_opponent_hand = true;
+            card.in_player_hand = false;
+        }
 
-	            _dealt_card.spread_index = _player_card_num;
-	            _dealt_card.in_player_hand = true;
-	        }
+        // Then deal player
+        else if (ds_list_size(player_hand) < 3) {
+            var index = ds_list_size(player_hand);
+            var card = ds_list_find_value(deck, ds_list_size(deck) - 1);
+            ds_list_delete(deck, ds_list_size(deck) - 1);
+            ds_list_add(player_hand, card);
 
-	        // ✅ Move to PICK only after all 3 dealt
-	        if (ds_list_size(player_hand) == 3) {
-	            state = STATES.PICK;
-	        }
-	    }
-	    break;
+            var target_y = room_height * 0.7;
+            var target_x = room_width * 0.45 + (index - 1) * 110;
+
+            card.x = 40;
+            card.y = room_height * 0.4; // deck start (middle-left)
+            card.target_x = target_x;
+            card.target_y = target_y;
+            card.base_y = target_y;
+
+            card.in_player_hand = true;
+            card.in_opponent_hand = false;
+        }
+
+        else {
+            state = STATES.PICK;
+        }
+    }
+    break;
+
+
 	case STATES.PICK:
 		//COMPUTER PICKS CARD
 		//PLAYER CAN ONLY CHOOSE ONE CARD

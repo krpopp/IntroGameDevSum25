@@ -1,5 +1,7 @@
 deal_timer = 0;
 deal_interval = 15; // frames between each card (adjust for speed)
+deal_state = "opponent";
+opponent_hand = ds_list_create();
 
 // offsets card's x position in the player's hand
 hand_x_offset = 100;
