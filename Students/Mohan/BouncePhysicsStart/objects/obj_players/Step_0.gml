@@ -1,4 +1,5 @@
-// Apply physics
+if (object_index == obj_players) exit;
+
 y_vel += grav;
 x_vel *= 0.9;
 r_x += x_vel;
@@ -9,7 +10,6 @@ r_x -= to_move_x;
 r_y -= to_move_y;
 var dir = sign(to_move_y);
 
-// Face direction
 if (x_vel > 0) {
     image_xscale = 1;
 } else if (x_vel < 0) {
@@ -17,13 +17,12 @@ if (x_vel > 0) {
 }
 
 switch(state){
-    case "start":
+    case "spawn":
         born_timer++;
-        if(born_timer >= 180){
+        if(born_timer >= 60){
             var spawn_x = (object_index == obj_green) ? room_width / 3 : room_width * 2 / 3;
-			var new_player = instance_create_layer(spawn_x, room_height + 20, "Instances", object_index);
-
-            audio_play_sound(snd_spawn, 1, false);  // ADDED SOUND
+            var new_player = instance_create_layer(spawn_x, room_height + 20, "Instances", object_index);
+            audio_play_sound(snd_spawn, 1, false);
             new_player.state = "normal";
             instance_destroy();
         }
@@ -35,7 +34,6 @@ switch(state){
             var collideWith = noone;
             
             if(dir >= 0) {
-                // Check collision with other player
                 if (object_index == obj_red) {
                     collideWith = instance_place(x, y + dir, obj_green);
                 } else {
@@ -45,16 +43,18 @@ switch(state){
                 if(collideWith != noone) {
                     if(place_meeting(x, y, collideWith) == false) {
                         colliding = true;
-                        audio_play_sound(snd_step, 1, false);  // ADDED SOUND
+                        audio_play_sound(snd_step, 1, false);
+                        
+                        // Stomper gets the point
                         if (object_index == obj_red) {
                             global.score_red += 1;
                         } else {
                             global.score_green += 1;
                         }
+                        
                         collideWith.y_vel = max(0, collideWith.y_vel + 2);
                         collideWith.state = "dead";
                         
-                        // Create stars
                         var count = random_range(5, 10);
                         for (var i = 0; i < count; i++){
                             var stars = instance_create_layer(collideWith.x, collideWith.y, "Instances", obj_star);
@@ -63,18 +63,12 @@ switch(state){
                         }
                     }
                 } else {
-                    // Check cloud collision
                     collideWith = instance_place(x, y + dir, obj_cloud);
                     if(collideWith != noone) {
                         if(place_meeting(x, y, collideWith) == false) {
                             colliding = true;
-                            audio_play_sound(snd_jump, 1, false);  // ADDED SOUND
-                            instance_destroy(collideWith);
-                            if (object_index == obj_red) {
-                                global.score_red += 1;
-                            } else {
-                                global.score_green += 1;
-                            }
+                            audio_play_sound(snd_jump, 1, false);
+                            collideWith.cloud_state = "stepped";
                         }
                     }
                 }
@@ -109,7 +103,6 @@ switch(state){
             }
         }
         
-        // Animation
         if (dir > 0){
             image_index = 2; 
         } else if (dir < 0){
@@ -118,36 +111,35 @@ switch(state){
             image_index = 1;
         }
         
-        // Wall bounce
         if (bbox_right + x_vel >= room_width){
             x = room_width - (bbox_right - x);
             x_vel = -x_vel;
-            audio_play_sound(snd_bounce, 1, false);  // ADDED SOUND
+            audio_play_sound(snd_bounce, 1, false);
         }
         if (bbox_left + x_vel <= 0){
             x = 0 + (x - bbox_left);
             x_vel = -x_vel;
-            audio_play_sound(snd_bounce, 1, false);  // ADDED SOUND
+            audio_play_sound(snd_bounce, 1, false);
         }
         
-        // Death check
         if (bbox_bottom > room_height && dir > 0){
-            state = "dead";
-            audio_play_sound(snd_die, 1, false);  // ADDED SOUND
-            if (object_index == obj_red) {
-                global.score_red = max(0, global.score_red - 1);
-            } else {
-                global.score_green = max(0, global.score_green - 1);
-            }
-            
-            // Create stars
-            var count = random_range(5, 10);
-            for (var i = 0; i < count; i++){
-                var stars = instance_create_layer(x, y, "Instances", obj_star);
-                stars.direction = random(360);
-                stars.speed = random_range(2, 5);
-            }
-        }
+		    state = "dead";
+		    audio_play_sound(snd_die, 1, false);
+    
+		    if (object_index == obj_red) {
+		        global.score_red -= 1;  
+		    } else {
+		        global.score_green -= 1;  
+		    }
+    
+		    // Create stars
+		    var count = random_range(5, 10);
+		    for (var i = 0; i < count; i++){
+		        var stars = instance_create_layer(x, y, "Instances", obj_star);
+		        stars.direction = random(360);
+		        stars.speed = random_range(2, 5);
+		    }
+		}
         break;
         
     case "dead":
@@ -155,11 +147,10 @@ switch(state){
         image_index = 3; 
         
         death_timer++;
-        if (death_timer > 90) {
+        if (death_timer > 30) {
             var spawn_x = (object_index == obj_green) ? room_width / 3 : room_width * 2 / 3;
-			var new_player = instance_create_layer(spawn_x, room_height + 20, "Instances", object_index);
-
-            audio_play_sound(snd_spawn, 1, false);  // ADDED SOUND
+            var new_player = instance_create_layer(spawn_x, room_height + 20, "Instances", object_index);
+            audio_play_sound(snd_spawn, 1, false);
             new_player.state = "normal";
             instance_destroy();
         }

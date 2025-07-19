@@ -12,7 +12,7 @@ cards_per_hand = 3;
 deck_x = 40;
 deck_y = room_height * 0.4;
 discard_x = room_width * 0.85;
-discard_y = room_height * 0.5;
+discard_y = room_height * 0.4;  // Same height as deck
 
 // Create all cards
 for (var i = 0; i < num_cards; i++) {
@@ -32,13 +32,14 @@ for (var i = 0; i < num_cards; i++) {
     ds_list_add(deck, new_card);
 }
 
-// Update visual stacking after shuffle
-for (var i = 0; i < ds_list_size(deck); i++) {
-    var card = deck[| i];
-    card.depth = ds_list_size(deck) - i;
-    card.target_y = deck_y - (2 * i);
-}
-
 // Initial shuffle
 randomize();
 ds_list_shuffle(deck);
+
+// Update visual stacking after shuffle
+for (var i = 0; i < ds_list_size(deck); i++) {
+    var card = deck[| i];
+    card.depth = 100 - i;  // Higher depth = behind, lower depth = in front
+    card.target_y = deck_y - (2 * i);  // Very tight spacing - just 1 pixel
+    card.y = card.target_y;  // Set initial position
+}
