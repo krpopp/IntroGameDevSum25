@@ -1,42 +1,40 @@
-if (obj_dealer.state == STATES.PICK) {
-    if (in_player_hand) {
-        // Mouse hover logic
-        var mx = mouse_x;
-        var my = mouse_y;
-        var padding = 4;
-        var is_hovering = (
-            mx >= x - padding && mx <= x + sprite_width + padding &&
-            my >= base_y - padding && my <= base_y + sprite_height + padding
-        );
+// Smooth movement to target position
+if (abs(x - target_x) > 1) {
+    x = lerp(x, target_x, 0.1);
+} else {
+    x = target_x;
+}
 
-        // Hover move up
-        target_y = is_hovering ? base_y - 20 : base_y;
+if (abs(y - target_y) > 1) {
+    y = lerp(y, target_y, 0.1);
+} else {
+    y = target_y;
+}
 
-        // Click to select (no longer flips)
-        if (is_hovering && mouse_check_button_pressed(mb_left)) {
-            if (global.player_choice_one == noone) {
-                global.player_choice_one = id;
-            } else if (global.player_choice_two == noone) {
-                global.player_choice_two = id;
-            }
-        }
+// Hover effect for player cards only (from your original code)
+if (owner == "player" && obj_game_manager.state == STATES.PICK) {
+    var mx = mouse_x;
+    var my = mouse_y;
+    var padding = 4;
+    
+    // Check if mouse is over this card
+    is_hovering = (mx >= x - padding && mx <= x + sprite_width + padding &&
+                   my >= y - padding && my <= y + sprite_height + padding);
+    
+    // Apply hover effect - card moves up
+    if (is_hovering) {
+        target_y = base_y - 20;  // Your original hover offset
+    } else {
+        target_y = base_y;
+    }
+}
 
-        // Flip automatically
-        if (!face_up) {
-            face_up = true;
-        }
-
-        // After first flip, push opponent's middle card
-        if (face_up && !has_flipped) {
-            has_flipped = true;
-
-            // Move middle opponent card down by modifying its base_y
-            with (obj_card) {
-                if (in_opponent_hand && spread_index == 1) {
-                    base_y += 20;
-                    target_y = base_y;
-                }
-            }
+// Simple click detection - just notify dealer
+if (mouse_check_button_pressed(mb_left)) {
+    if (position_meeting(mouse_x, mouse_y, id)) {
+        // Tell the dealer which card was clicked
+        with (obj_game_manager) {
+            card_clicked = other.id;
         }
     }
 }

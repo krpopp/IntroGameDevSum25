@@ -1,21 +1,11 @@
-if(abs(x - target_x) > 1) {
-	x = lerp(x, target_x, 0.1);
+// Set sprite based on face up/down
+if (face_up) {
+    sprite_index = spr_card_front;
+    image_index = card_type;  // 0=scissors, 1=rock, 2=paper
 } else {
-	x = target_x;
+    sprite_index = spr_card_back;
+    image_index = 0;
 }
 
-if(abs(y - target_y) > 1) {
-	y = lerp(y, target_y, 0.1);
-} else {
-	y = target_y;
-}
-
-if(face_up) {
-	sprite_index = spr_card_front;
-	image_index = face_index;
-} else {
-	sprite_index = spr_card_back;
-	image_index = 0;
-}
-
+// Draw the card
 draw_self();
