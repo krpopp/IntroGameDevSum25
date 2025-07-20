@@ -16,12 +16,13 @@ discard_y = room_height * 0.4;  // Same height as deck
 
 // Create all cards
 for (var i = 0; i < num_cards; i++) {
-    var new_card = instance_create_layer(deck_x, deck_y, "Instances", obj_card);
+    var new_card = instance_create_layer(deck_x, deck_y - (3 * i), "Instances", obj_card);
     
-    // Visual stacking
-    new_card.y = deck_y - (2 * i);
+    // Set initial position to final position (no animation)
+    new_card.x = deck_x;
+    new_card.y = deck_y - (3 * i);
     new_card.target_x = deck_x;
-    new_card.target_y = deck_y - (2 * i);
+    new_card.target_y = deck_y - (3 * i);
     
     // Set card type (0=scissors, 1=rock, 2=paper)
     new_card.card_type = i mod 3;
@@ -36,10 +37,9 @@ for (var i = 0; i < num_cards; i++) {
 randomize();
 ds_list_shuffle(deck);
 
-// Update visual stacking after shuffle
 for (var i = 0; i < ds_list_size(deck); i++) {
     var card = deck[| i];
-    card.depth = 100 - i;  // Higher depth = behind, lower depth = in front
-    card.target_y = deck_y - (2 * i);  // Very tight spacing - just 1 pixel
-    card.y = card.target_y;  // Set initial position
+    card.depth = 100 - i;
+    card.target_y = deck_y - (3 * i);
+    card.y = card.target_y;
 }

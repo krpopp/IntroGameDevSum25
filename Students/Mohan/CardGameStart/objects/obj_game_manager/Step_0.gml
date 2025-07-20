@@ -86,6 +86,9 @@ switch(state) {
         break;
         
     case STATES.PLAYER_PICK:
+	    if (opponent_selected_card != noone && opponent_selected_card.y != opponent_selected_card.target_y) {
+		    card_clicked = noone;
+		}
         if (card_clicked != noone && player_selected_card == noone) {
             if (card_clicked.owner == "player") {
                 player_selected_card = card_clicked;
