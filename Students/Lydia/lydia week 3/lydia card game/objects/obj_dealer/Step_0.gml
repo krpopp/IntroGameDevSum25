@@ -6,6 +6,10 @@ switch(state) {
 		var _computer_card_num = ds_list_size(computer_hand);
 		deal_timer ++;
 		
+
+	
+	_y_offset = 0;
+		
 		if(deal_timer > 30){
 	    if (_computer_card_num < 3 )
 	    {
@@ -42,6 +46,9 @@ switch(state) {
 		break;
 		
 	case STATES.PICK:
+	if (state == STATES.PICK ) {
+	    show_debug_message("Entered pick state");
+		}
 		//COMPUTER PICKS CARD
 		pick_timer ++;
 		if(pick_timer > 60){
@@ -62,29 +69,38 @@ switch(state) {
 		break;
 		
 	case STATES.COMPARE:
+	if (state == STATES.COMPARE ) {
+	    show_debug_message("Entered COMPARE state");
+		}
 		compare_timer ++;
+		
+		
 		if(compare_timer > 30){
 		global.computer_choice._face_up = true;
 		}
 		
 		//ROCK PAPER SCISSORS LOGIC 
 		
-		if(compare_timer > 120){
+	if(compare_timer > 120 ){
+		compare_timer = 0;
 		if(global.player_choice.face_index == global.computer_choice.face_index){
 			
-			state = STATES.CLEANUP	
+			state = STATES.CLEANUP;
+			exit;
 		}
 		else if(global.player_choice.face_index - global.computer_choice.face_index == 1||global.player_choice.face_index - global.computer_choice.face_index == -2){
 			global.player_points ++;
-			
-			state = STATES.CLEANUP
+			state = STATES.CLEANUP;
+			exit;
 		}
 	    else
 	    {
 	        global.computer_points ++;
-			
-	        state = STATES.CLEANUP;
+			state = STATES.CLEANUP;
+	        
+			exit;
 	    }
+		
 		}
 	    
 		break;
@@ -94,13 +110,14 @@ switch(state) {
 		if (state == STATES.CLEANUP ) {
 	    show_debug_message("Entered CLEANUP state");
 		}
+		show_debug_message("CLEANUP state: cleanup_timer = " + string(cleanup_timer));
 		
 		var _discard_x = room_width - x - spr_cards.sprite_width;
 		var _discard_y = y;
 		
 		cleanup_timer ++;
-		
-		if (global.computer_choice != noone && cleanup_timer > 30) {
+if(cleanup_timer > 30){
+	if (global.computer_choice != noone ) {
         global.computer_choice.target_x = _discard_x;
         global.computer_choice.target_y = _discard_y + _y_offset;
         _y_offset += 2;
@@ -109,7 +126,7 @@ switch(state) {
 		cleanup_timer = 0;
     }
 
-    else if (global.player_choice != noone && cleanup_timer > 30) {
+    else if (global.player_choice != noone) {
         global.player_choice.target_x = _discard_x;
         global.player_choice.target_y = _discard_y + _y_offset;
         _y_offset += 2;
@@ -118,51 +135,51 @@ switch(state) {
 		cleanup_timer = 0;
     }
 	
-else if(computer_hand != noone && cleanup_timer > 30){
-	for (var _i = 0; _i < ds_list_size(computer_hand); _i++) {
-        var card = computer_hand[| _i];       
-        card.target_x = _discard_x;
-        card.target_y = _discard_y + _y_offset;
-        _y_offset += 2;
-        ds_list_add(discard, card);
-		ds_list_delete(computer_hand, ds_list_size.computer_hand - _i);
-		cleanup_timer = 0;
+else if(ds_list_size(computer_hand) > 0 ){
+	var loop_timer = 0;
+	for (var _i = 2; _i >= 0 ; _i--) {
+		
+		if(loop_timer > 30){
+	        var card = computer_hand[| _i];  
+			card.face_up = true;
+	        card.target_x = _discard_x;
+	        card.target_y = _discard_y + _y_offset;
+	        _y_offset += 2;
+	        ds_list_add(discard, card);
+			ds_list_delete(computer_hand, _i);
+			loop_timer = 0;
+		}
     }
-}else if(player_hand != noone && cleanup_timer > 30){
-	for (var _i = 0; _i < ds_list_size(player_hand); _i++) {
+}else if(ds_list_size(player_hand) > 0 ){
+	for (var _i = 2; _i >= 0; _i--) {
         var card = player_hand[| _i];       
         card.target_x = _discard_x;
         card.target_y = _discard_y + _y_offset;
         _y_offset += 2;
         ds_list_add(discard, card);
-		ds_list_delete(player_hand, ds_list_size.player_hand - _i);
+		ds_list_delete(player_hand, _i);
 		cleanup_timer = 0;
 	}
 }else if(deck != noone){
 		
-	deal_timer = 0;
-	pick_timer = 0;
-	compare_timer = 0;
-	cleanup_timer = 0;
-	_y_offset = 0;
-
 	state = STATES.DEAL
 }else{
-	
-	
-	deal_timer = 0;
-	pick_timer = 0;
-	compare_timer = 0;
-	cleanup_timer = 0;
-	_y_offset = 0;
-	
+		
 	state = STATES.RESHUFFLE
 }		
+}
 	   
 		break;
 
 
 case STATES.RESHUFFLE:
+
+
+	deal_timer = 0;
+	pick_timer = 0;
+	compare_timer = 0;
+	cleanup_timer = 0;
+	_y_offset = 0;
 
 for (var _i = 0; _i < ds_list_size(discard); _i++) {
         var card = discard[| _i];       

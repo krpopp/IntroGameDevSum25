@@ -4,6 +4,7 @@ pick_timer = 0;
 compare_timer = 0;
 cleanup_timer = 0;
 _y_offset = 0;
+
 //offets card's x position in the player's hand
 hand_x_offset = 100;
 _num_card_picked = 0;
