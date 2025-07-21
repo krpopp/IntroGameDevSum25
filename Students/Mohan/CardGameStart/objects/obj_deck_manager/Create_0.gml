@@ -12,7 +12,7 @@ cards_per_hand = 3;
 deck_x = 40;
 deck_y = room_height * 0.4;
 discard_x = room_width * 0.85;
-discard_y = room_height * 0.4;  // Same height as deck
+discard_y = room_height * 0.4;  
 
 // Create all cards
 for (var i = 0; i < num_cards; i++) {

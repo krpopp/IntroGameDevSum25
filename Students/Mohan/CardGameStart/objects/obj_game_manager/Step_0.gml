@@ -23,7 +23,7 @@ switch(state) {
                     
                     for (var i = 0; i < ds_list_size(deck_manager.deck); i++) {
                         var deck_card = deck_manager.deck[| i];
-                        deck_card.depth = 100 - i;
+                        deck_card.depth = -100 - i;
                         deck_card.target_y = deck_manager.deck_y - (3 * i);
                     }
                 }
@@ -46,7 +46,7 @@ switch(state) {
                     
                     for (var i = 0; i < ds_list_size(deck_manager.deck); i++) {
                         var deck_card = deck_manager.deck[| i];
-                        deck_card.depth = 100 - i;
+                        deck_card.depth = -100 - i;
                         deck_card.target_y = deck_manager.deck_y - (3 * i);
                     }
                 }
@@ -62,7 +62,7 @@ switch(state) {
         opponent_pick_timer++;
         
         if (opponent_pick_timer >= opponent_pick_delay) {
-            if (is_first_round) {
+            if (is_first_round && cards_played_this_round == 0) {
                 if (ds_list_size(deck_manager.opponent_hand) >= 2) {
                     opponent_selected_card = ds_list_find_value(deck_manager.opponent_hand, 1);
                 }
@@ -72,23 +72,21 @@ switch(state) {
             }
             
             if (opponent_selected_card != noone) {
-                if (opponent_selected_card.hand_position == 1) {
-                    opponent_selected_card.target_y = opponent_selected_card.base_y + 150;
-                } else {
-                    opponent_selected_card.target_x = room_width * 0.45;
-                    opponent_selected_card.target_y = room_height * 0.3;
-                }
+                // Always move to center position for comparison
+                opponent_selected_card.target_x = room_width * 0.45;
+                opponent_selected_card.target_y = room_height * 0.3;
                 opponent_selected_card.depth = -10;
             }
             
             state = STATES.PLAYER_PICK;
+            cards_played_this_round++;
         }
         break;
         
     case STATES.PLAYER_PICK:
-	    if (opponent_selected_card != noone && opponent_selected_card.y != opponent_selected_card.target_y) {
-		    card_clicked = noone;
-		}
+        if (opponent_selected_card != noone && opponent_selected_card.y != opponent_selected_card.target_y) {
+            card_clicked = noone;
+        }
         if (card_clicked != noone && player_selected_card == noone) {
             if (card_clicked.owner == "player") {
                 player_selected_card = card_clicked;
@@ -109,7 +107,7 @@ switch(state) {
         
         if (compare_timer == 60) {  
             opponent_selected_card.face_up = true;
-            
+            player_selected_card.face_up = true; 
             var player_card_type = player_selected_card.card_type;
             var opponent_card_type = opponent_selected_card.card_type;
             
@@ -132,6 +130,7 @@ switch(state) {
         if (compare_timer >= 120) {  
             ds_list_clear(cards_to_move);
             
+            opponent_selected_card.face_up = true;
             ds_list_add(cards_to_move, opponent_selected_card);
             
             ds_list_add(cards_to_move, player_selected_card);
@@ -163,7 +162,7 @@ switch(state) {
             var card = cards_to_move[| 0];
             ds_list_delete(cards_to_move, 0);
             
-            // Remove from hand
+            // Remove from hand lists before adding to discard
             var index = ds_list_find_index(deck_manager.player_hand, card);
             if (index != -1) {
                 ds_list_delete(deck_manager.player_hand, index);
@@ -174,12 +173,13 @@ switch(state) {
                 }
             }
             
+            // Add to discard pile
             ds_list_add(deck_manager.discard, card);
             card.owner = "discard";
             card.target_x = deck_manager.discard_x;
             var discard_index = ds_list_size(deck_manager.discard) - 1;
-            card.target_y = deck_manager.deck_y - (3 * discard_index);
-            card.depth = 100 - discard_index;
+            card.target_y = deck_manager.discard_y - (3 * discard_index);
+            card.depth = -100 - discard_index;
             card.face_up = true;
             
             move_timer = 0;
@@ -191,41 +191,45 @@ switch(state) {
             player_selected_card = noone;
             opponent_selected_card = noone;
             
-            if (ds_list_size(deck_manager.player_hand) == 0) {
-                if (ds_list_size(deck_manager.deck) < deck_manager.cards_per_hand * 2) {
-                    state = STATES.RESHUFFLE;
-                } else {
-                    state = STATES.DEAL;
-                }
+            if (ds_list_size(deck_manager.deck) < deck_manager.cards_per_hand * 2) {
+                state = STATES.RESHUFFLE;
             } else {
-                state = STATES.OPPONENT_PICK;
-                opponent_pick_timer = 0;
+                state = STATES.DEAL;
             }
         }
         break;
         
     case STATES.RESHUFFLE:
-        while (ds_list_size(deck_manager.discard) > 0) {
+        // Move cards one by one from discard to deck
+        if (ds_list_size(deck_manager.discard) > 0) {
             var card = ds_list_find_value(deck_manager.discard, 0);
             ds_list_delete(deck_manager.discard, 0);
             ds_list_add(deck_manager.deck, card);
             
             card.owner = "deck";
             card.face_up = false;
-        }
-        
-        // Shuffle
-        ds_list_shuffle(deck_manager.deck);
-        
-        for (var i = 0; i < ds_list_size(deck_manager.deck); i++) {
-            var card = deck_manager.deck[| i];
+            
+            // Just move horizontally to deck X position
+            var deck_index = ds_list_size(deck_manager.deck) - 1;
             card.target_x = deck_manager.deck_x;
-            card.target_y = deck_manager.deck_y - (3 * i);
-            card.depth = 100 - i;
+            card.target_y = deck_manager.deck_y - (3 * deck_index);
+            card.depth = -100 - deck_index;
         }
-        
-        is_first_round = true;
-        
-        state = STATES.DEAL;
+        else {
+            // All cards moved, shuffle and continue
+            ds_list_shuffle(deck_manager.deck);
+            
+            for (var i = 0; i < ds_list_size(deck_manager.deck); i++) {
+                var card = deck_manager.deck[| i];
+                card.target_x = deck_manager.deck_x;
+                card.target_y = deck_manager.deck_y - (3 * i);
+                card.depth = -100 - i;
+            }
+            
+            is_first_round = true;
+            cards_played_this_round = 0;
+            
+            state = STATES.DEAL;
+        }
         break;
 }
