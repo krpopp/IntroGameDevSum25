@@ -3,8 +3,14 @@ deal_timer = 0;
 pick_timer = 0;
 compare_timer = 0;
 cleanup_timer = 0;
+reshuffle_timer = 0;
 _y_offset = 0;
-
+_num_card_picked = 0;
+ _player_card_num = 0;
+_computer_card_num = 0;
+audio_played = true; 
+shuffled_cards = 0;
+		
 //offets card's x position in the player's hand
 hand_x_offset = 100;
 _num_card_picked = 0;
@@ -64,6 +70,6 @@ randomize();
 ds_list_shuffle(deck);
 
 for(var _i = 0; _i < num_cards; _i++) {
-	deck[| _i].depth = num_cards - _i;
 	deck[| _i].target_y = y - (2 * _i);
+	deck[| _i].depth = deck[| _i].target_y;
 }
