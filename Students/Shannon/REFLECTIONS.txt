@@ -25,6 +25,18 @@ the bottom shadow) but it wasn't a relevant detail so i let it slide
 i've used particles like 4 times in my life so i thought i was familiar enough with it, but this time i had to copy something to try get a super close particle
 feel. it wasn't as hard as i thought and i managed to get it after a few tries so that's awesome i'm starting to like particles
 
+------
+
+assignment 3
+
+i do regret doing this assignment on the last day because i had a loot of work to do this week, but anyway. i had confidence in this project because i did make another
+more complicated card game on gamemaker before but this didn't seem to really work out as planned because it was so rushed i ended up spaghetti coding everything
+
+and im looking back at this and honestly im struggling to read my own code deadass. but the art looks pretty much on par which is cool and the mechanics work 
+perfectly until the comparison/discarding/reshuffling part
+
+for this project im going to see if i can use up an extension and fix that
+
 
 
 

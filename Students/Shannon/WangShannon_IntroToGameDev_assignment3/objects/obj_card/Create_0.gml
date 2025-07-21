@@ -1,6 +1,7 @@
 
 // defaults
 image_speed = 0;
+depth = -500;
 
 // card details
 card_type = "ROCK"; 
@@ -22,7 +23,7 @@ pile_y = room_height / 2;
 dealer_x = room_width / 2;
 dealer_y = 150;
 dealer_play_x = room_width/2;
-dealer_play_y = 300;
+dealer_play_y = 310;
 global.dealer_pick = noone;
 
 // player
@@ -30,8 +31,13 @@ global.dealer_pick = noone;
 player_x = room_width / 2;
 player_y = room_height - 150;
 player_play_x = room_width / 2;
-player_play_y = room_height - 300;
+player_play_y = room_height - 310;
 global.player_pick = noone;
+
+// discard
+
+discard_x = room_width - 75;
+discard_y = 150;
 
 
 
@@ -56,6 +62,8 @@ function switch_card_state() {
 	
 	switch (card_state) {
 		case "pile":
+			x = lerp(x, pile_x, deal_speed);
+			y = lerp(y, pile_y, deal_speed);
 			break;
 		case "dealing":
 		
@@ -82,7 +90,10 @@ function switch_card_state() {
 				y = lerp(y, room_height - 156, 0.2);
 				if (mouse_check_button_pressed(mb_left)) {
 					global.player_pick = card_type;
+					global.player_card = id;
 					card_state = "player_played";
+					ds_list_delete(global.dealer_hand, ds_list_find_index(global.dealer_hand, self));
+					audio_play_sound(snd_move_card, false, false);
 				}
 			}
 			else {
@@ -99,8 +110,16 @@ function switch_card_state() {
 		case "dealer_played":
 			x = lerp(x, dealer_play_x, 0.2);
 			y = lerp(y, dealer_play_y, 0.2);
+			
+			if (obj_card_manager.result_delay <= 0 && !card_flipped) {
+				card_flipped = true;
+			}
 			break;
 		case "discard":
+		
+			x = lerp(x, discard_x, 0.2);
+			y = lerp(y, discard_y, 0.2);
+			
 			break;
 	}
 }
