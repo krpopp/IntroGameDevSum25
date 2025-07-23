@@ -26,13 +26,14 @@ switch(state) {
 				
 				if ( _player_card_num < 3) { 
 			
-			        var _dealt_card = ds_list_find_value(deck, ds_list_size(deck) - 1);
+			    var _dealt_card = ds_list_find_value(deck, ds_list_size(deck) - 1);
 			        ds_list_delete(deck, ds_list_size(deck) - 1);
 			        ds_list_add(player_hand, _dealt_card);
         
 			        _dealt_card.target_x = room_width / 4 + _player_card_num * hand_x_offset;
 			        _dealt_card.target_y = room_height * 0.1;
 			        _dealt_card.in_player_hand = true;
+					audio_play_sound(snd_deal,1,false);
 					
 						is_dealing = false;		
 
@@ -45,6 +46,7 @@ switch(state) {
 			        _dealt_card.target_x = room_width / 4 + _bot_card_num * hand_x_offset;
 			        _dealt_card.target_y = room_height * 0.7;
 			        _dealt_card.in_bot_hand = true;
+					audio_play_sound(snd_deal,1,false);
 					
 						is_dealing = false;	
 				} else {
@@ -64,6 +66,7 @@ switch(state) {
 			if (ds_list_size(player_hand) == 3) {
  
 		    middle_card.target_y = room_height * 0.3;
+			audio_play_sound(snd_deal,1,false);
     
 		    middle_card.face_up = false;
 			
@@ -97,7 +100,7 @@ switch(state) {
 	case STATES.COMPARE:
 		var is_not_equal = noone;
 		var _equal = false;
-		var timer_comparing = 30;
+		var timer_comparing = 60;
 		//show_message("123");
 		
 		if(!is_not_equal){
@@ -118,6 +121,7 @@ switch(state) {
 			
 			
 	if(is_not_equal){
+		audio_play_sound(snd_correct,1,false);
 		
 				if (global.bot_choice_one.face_index - global.player_choice_two.face_index == -1
 					|| global.bot_choice_one.face_index - global.player_choice_two.face_index == 2){
@@ -171,6 +175,7 @@ switch(state) {
 			        player_discard.face_up = true;
 					player_discard.in_player_hand = false;
 					global.player_choice_two = noone;
+					audio_play_sound(snd_deal,1,false);
 				
 					is_discarding = false;
 			    }
@@ -187,6 +192,7 @@ switch(state) {
 					bot_discard.in_bot_hand = false;
 					global.bot_choice_one = noone;
 					bot_discard.in_bot_hand = false;
+					audio_play_sound(snd_deal,1,false);
 			
 					is_discarding = false;
 			    }
@@ -211,16 +217,8 @@ switch(state) {
 	case STATES.RESHUFFLE:
 		//RESHUFFLE THE DISCARD TO THE DECK
 		
-			if(!is_shuffling){
-				timer_shuffle -= 1;
-						//show_message(timer_discard);
-						 if(timer_shuffle <= 0){
-							timer_shuffle = 30;
-							is_shuffling = true;
-						 }
-				}
 		
-			if(is_shuffling){
+			if(ds_list_size(discard) > 0){
 			var _new_deck = ds_list_find_value(discard, ds_list_size(discard) - 1);
 			
 			ds_list_delete(discard, ds_list_size(discard) - 1);
@@ -229,6 +227,7 @@ switch(state) {
 			_new_deck.target_y = room_height * 0.4 + ds_list_size(discard) * 5.5;
 			_new_deck.face_up = false;
 			_new_deck.depth = - ds_list_size(deck);
+			audio_play_sound(snd_deal,1,false);
 					//is_shuffling = false;
 			}
 		
@@ -237,11 +236,19 @@ switch(state) {
 			randomize();
 			//SHUFFLE THE DECK
 			ds_list_shuffle(deck);
-		
-		
-			state = STATES.DEAL;
+			
+			
+			 for(var i = 0; i < ds_list_size(deck); i++){
+		        var card = deck[| i];
+        
+		        card.target_x = room_width * 0.1; 
+       
+		        card.target_y = room_height * 0.3 + (ds_list_size(deck) - 1 - i) * 6; 
+		        card.depth = -i;
+		        card.face_up = false;
+		        }
+					state = STATES.DEAL;
 			}
-		
 		
 		break;
 }

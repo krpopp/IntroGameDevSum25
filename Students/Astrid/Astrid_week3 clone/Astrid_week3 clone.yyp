@@ -40,6 +40,8 @@
     {"id":{"name":"obj_dealer","path":"objects/obj_dealer/obj_dealer.yy",},},
     {"id":{"name":"obj_points","path":"objects/obj_points/obj_points.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"snd_correct","path":"sounds/snd_correct/snd_correct.yy",},},
+    {"id":{"name":"snd_deal","path":"sounds/snd_deal/snd_deal.yy",},},
     {"id":{"name":"spr_card_back","path":"sprites/spr_card_back/spr_card_back.yy",},},
     {"id":{"name":"spr_card_front","path":"sprites/spr_card_front/spr_card_front.yy",},},
     {"id":{"name":"spr_inclass","path":"sprites/spr_inclass/spr_inclass.yy",},},

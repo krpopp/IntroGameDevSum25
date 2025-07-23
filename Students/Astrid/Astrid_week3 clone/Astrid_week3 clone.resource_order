@@ -19,6 +19,7 @@
   "ResourceOrderSettings":[
     {"name":"obj_dealer","order":1,"path":"objects/obj_dealer/obj_dealer.yy",},
     {"name":"obj_points","order":2,"path":"objects/obj_points/obj_points.yy",},
+    {"name":"snd_deal","order":1,"path":"sounds/snd_deal/snd_deal.yy",},
     {"name":"spr_card_back","order":1,"path":"sprites/spr_card_back/spr_card_back.yy",},
     {"name":"spr_inclass","order":2,"path":"sprites/spr_inclass/spr_inclass.yy",},
   ],

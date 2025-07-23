@@ -18,6 +18,7 @@ if(obj_dealer.state == STATES.PICK) {
 					face_up = true;
 					target_y  = room_height * 0.5;
 					target_x = room_width / 4 + 100;
+					audio_play_sound(snd_deal,1,false);
 				
 				//check if match
 				//} else {
