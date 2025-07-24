@@ -21,6 +21,8 @@ dealer_move_max = 20;
 dealer_move_delay = dealer_move_max;
 result_max = 120;
 result_delay = result_max;
+discard_max = 60;
+discard_delay = 60;
 reshuffle_max = 5;
 reshuffle_delay = reshuffle_max;
 
@@ -57,6 +59,7 @@ function process_deck() {
 
 function update() {
 	deal_cards();
+	check_player_pick();
 }
 
 function deal_cards() {
@@ -208,8 +211,15 @@ function deal_cards() {
 				global.dealer_pick = noone;
 			}
 		}
-		else if (global.dealer_pick = noone) {
-			phase = "discarding";
+		else if (global.dealer_pick == noone) {
+			if (discard_delay > 0) {
+				discard_delay--;
+			}
+			else {
+				discard_delay = discard_max;
+				phase = "discarding";
+			}
+			
 		}
 		break;
 	case "discarding":
@@ -221,6 +231,7 @@ function deal_cards() {
 				var _card = ds_list_find_value(global.discard_order, 0);
 			
 				if (instance_exists(_card)) {
+					audio_play_sound(snd_move_card, false, false);
 					_card.card_state = "discard";
 					_card.discard_y = room_height/2 - ds_stack_size(global.discard) * 2;
 					_card.card_flipped = false;
@@ -265,6 +276,11 @@ function deal_cards() {
 	}
 }
 
+function check_player_pick() {
+	if (global.player_pick != noone && ds_list_size(global.player_hand) == 3) {
+		ds_list_delete(global.player_hand, ds_list_find_index(global.player_hand, global.player_card));
+	}
+}
 
 
 deck_add("ROCK", 8);

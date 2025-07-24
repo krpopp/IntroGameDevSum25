@@ -38,7 +38,8 @@ perfectly until the comparison/discarding/reshuffling part
 for this project im going to see if i can use up an extension and fix that
 
 
-
+update: i tried using the debugger and after a lot of tries, i couldn't find what caused the glitch so i'll just turn in the project. i was able to get one card
+to properly discard after being played but idk where the other ones were coming from and it just didn't make sense
 
 
 
