@@ -5,7 +5,8 @@ player_spd = 1.2;
 player_idle = true;
 player_dir = "down";
 image_speed = 0;
-image_yscale = 1;
+image_xscale = 0.9;
+image_yscale = 0.9;
 
 // walk animation
 walk_timer = 5;

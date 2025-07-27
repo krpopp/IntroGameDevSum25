@@ -44,5 +44,6 @@
     {"name":"spr_floor_pattern","order":7,"path":"sprites/spr_floor_pattern/spr_floor_pattern.yy",},
     {"name":"spr_key","order":3,"path":"sprites/spr_key/spr_key.yy",},
     {"name":"spr_npc","order":6,"path":"sprites/spr_npc/spr_npc.yy",},
+    {"name":"spr_npc3","order":10,"path":"sprites/spr_npc3/spr_npc3.yy",},
   ],
 }
