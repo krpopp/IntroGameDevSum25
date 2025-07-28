@@ -1,4 +1,6 @@
-camera_id = camera_create_view(0, 0, 477, 320);
+window_set_fullscreen(true);
+
+camera_id = camera_create_view(100, 200, 477, 320);
 view_camera[0] = camera_id;
 view_visible[0] = true;
 
@@ -6,10 +8,12 @@ cam_w = 477;
 cam_h = 320;
 cam_speed = 0.5;
 
-camera_set_view_pos(view_camera[0], 452, -300);
+//camera_set_view_pos(view_camera[0], 452, -300);
 
 function update() {
-	set_camera();
+	if (room == rm_outside) {
+		set_camera();
+	}
 }
 
 function set_camera() {

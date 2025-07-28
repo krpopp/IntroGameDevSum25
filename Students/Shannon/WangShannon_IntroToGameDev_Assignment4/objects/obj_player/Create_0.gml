@@ -5,19 +5,19 @@ player_spd = 1.2;
 player_idle = true;
 player_dir = "down";
 image_speed = 0;
-image_xscale = 0.9;
-image_yscale = 0.9;
+//image_xscale = 0.9;
+//image_yscale = 0.9;
 
 // walk animation
 walk_timer = 5;
 anim = 0;
-down_anim = [1, 0, 2, 0];
-up_anim = [4, 3, 5, 3];
-left_anim = [7, 8, 9, 6];
-right_anim = [11, 12, 13, 10];
+down_anim = [1, 2, 3, 0];
+up_anim = [5, 6, 7, 4];
+left_anim = [9, 10, 11, 8];
+right_anim = [13, 14, 15, 12];
 
 // collision checks
-coll_objs = [obj_castle, obj_castle_door, obj_npc1, obj_npc2];
+coll_objs = [obj_vendorstand, obj_npc1, obj_npc2, obj_npc3];
 can_move_down = true;
 can_move_up = true;
 can_move_right = true;
@@ -50,21 +50,21 @@ function player_movement() {
 	if (keyboard_check(ord("W")) || keyboard_check(vk_up)) {
 		player_idle = false;
 		player_dir = "up";
-		if (can_move_up) {
+		if (can_move_up && y > 170) {
 			y -= player_spd;
 		}
 	}
 	if (keyboard_check(ord("S")) || keyboard_check(vk_down)) {
 		player_idle = false;
 		player_dir = "down";
-		if (can_move_down) {
+		if (can_move_down && y < 415) {
 			y += player_spd;
 		}
 	}
 	if (keyboard_check(ord("A")) || keyboard_check(vk_left)) {
 		player_idle = false;
 		player_dir = "left";
-		if (can_move_left) {
+		if (can_move_left && x > 240) {
 			x -= player_spd;
 		}
 		
@@ -72,7 +72,7 @@ function player_movement() {
 	if (keyboard_check(ord("D")) || keyboard_check(vk_right)) {
 		player_idle = false;
 		player_dir = "right";
-		if (can_move_right) {
+		if (can_move_right && x < 750) {
 			x += player_spd;
 		}
 	}
@@ -88,9 +88,9 @@ function player_animation() {
 	if (player_idle) {
 		switch (player_dir) {
 			case "down": image_index = 0; break;
-			case "up": image_index = 3; break;
-			case "left": image_index = 6; break;
-			case "right": image_index = 10; break;
+			case "up": image_index = 4; break;
+			case "left": image_index = 8; break;
+			case "right": image_index = 12; break;
 		}
 	}
 	else {

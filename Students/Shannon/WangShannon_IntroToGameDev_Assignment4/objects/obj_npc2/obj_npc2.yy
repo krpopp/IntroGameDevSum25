@@ -12,7 +12,10 @@
     "name":"game",
     "path":"folders/Objects/game.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_npc1",
+    "path":"objects/obj_npc1/obj_npc1.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_npc3",
-    "path":"sprites/spr_npc3/spr_npc3.yy",
+    "name":"spr_npc2",
+    "path":"sprites/spr_npc2/spr_npc2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

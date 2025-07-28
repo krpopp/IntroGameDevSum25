@@ -8,8 +8,8 @@
   "name":"obj_crate_small",
   "overriddenProperties":[],
   "parent":{
-    "name":"game",
-    "path":"folders/Objects/game.yy",
+    "name":"unused",
+    "path":"folders/Objects/unused.yy",
   },
   "parentObjectId":null,
   "persistent":false,
