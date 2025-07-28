@@ -3,7 +3,7 @@ page_texts = [
    
    "This story begins with two girls, Jane and Luan. And you, are Jane's beloved cat. Jane and Luan had been the very best of friends for as long as they could remember, 14 years of secrets whispered under blankets and pinkie promises that lasted forever. For Jane, she lost her mother when she's four, Luan had gradually become the one who filled that maternal void, a sister without blood ties, a best friend, and someone she simply couldn't afford to lose. But Luan... Jane has always been something more than that...Luan loves Jane.",
     
-	"Luan's secret love is desperate and obsessive. She was terrified to reveal her attraction to women and her desire for Jane. Yet, every time Jane grew close to someone *anyone, whether man or woman*, Luan's vision darkened with something jagged. Then came that afternoon, Luan confessed her feelings to Jane...",
+	"Luan's secret love is desperate and obsessive. She was terrified to reveal her attraction to women and her desire for Jane. Yet, every time Jane grew close to someone *anyone, whether man or woman*, Luan's vision darkened with something jagged. So, then came that afternoon, Luan confessed her feelings to Jane...",
    
    "The words tore free like a confession at gunpoint... ",
 	
