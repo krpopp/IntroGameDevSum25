@@ -63,9 +63,13 @@ function switch_card_state() {
 	switch (card_state) {
 		case "pile":
 			x = lerp(x, pile_x, deal_speed);
-			y = lerp(y, pile_y, deal_speed);
+			//y = lerp(y, pile_y, deal_speed);
 			break;
 		case "dealing":
+		
+			if (ds_list_find_index(global.card_pile, id) != -1) {
+				ds_list_delete(global.card_pile, ds_list_find_index(global.card_pile, id));
+			}
 		
 			switch (hand) {
 				case "none":
@@ -92,7 +96,6 @@ function switch_card_state() {
 					global.player_pick = card_type;
 					global.player_card = id;
 					card_state = "player_played";
-					ds_list_delete(global.dealer_hand, ds_list_find_index(global.dealer_hand, self));
 					audio_play_sound(snd_move_card, false, false);
 				}
 			}
@@ -102,6 +105,7 @@ function switch_card_state() {
 			
 			break;
 		case "dealer_hand":
+		
 			break;
 		case "player_played":
 			x = lerp(x, player_play_x, 0.2);
