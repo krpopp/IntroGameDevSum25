@@ -3,7 +3,7 @@ page_texts = [
    
    "This story begins with two girls, Jane and Luan. And you, are Jane's beloved cat. Jane and Luan had been the very best of friends for as long as they could remember, 14 years of secrets whispered under blankets and pinkie promises that lasted forever. For Jane, she lost her mother when she's four, Luan had gradually become the one who filled that maternal void, a sister without blood ties, a best friend, and someone she simply couldn't afford to lose. But Luan... Jane has always been something more than that...Luan loves Jane.",
     
-	"Luan's secret love is desperate and obsessive. She was terrified to reveal her attraction to women and her desire for Jane. Yet, every time Jane grew close to someone *anyone, whether man or woman*, Luan's vision darkened with something jagged. Then came that afternoon, Luan confessed her feelings to Jane......",
+	"Luan's secret love is desperate and obsessive. She was terrified to reveal her attraction to women and her desire for Jane. Yet, every time Jane grew close to someone *anyone, whether man or woman*, Luan's vision darkened with something jagged. Then came that afternoon, Luan confessed her feelings to Jane...",
    
    "The words tore free like a confession at gunpoint... ",
 	
@@ -23,11 +23,11 @@ page_texts = [
 	
 	"Jane eventually began dating someone, a devoted boy who adored her, named Jason. Meanwhile, Luan threw herself into a series of short_lived flings with women, each relationship burning bright and fast before fizzling out within weeks. None lasted more than a month. Every kiss felt like a betrayal; not to her lovers, but to Jane. Luan told herself she was moving on. But the truth was, she was only running in circles * each new girl just another failed distraction from the one she couldn't have...",
 	
-	"But life, relentless in its unpredictability, spared no one * not except Jane. Six years of fragile normalcy passed. Then, on an otherwise ordinary evening, an unexpectable happened: Jason collapsed without warning, his heart giving out before the ambulance could even arrive. Just like that, a Cardiac Arrest and Gone. No warnings. No goodbyes. Jane lost another loved one of her life. Maybe She jsut can never get along with the number 4...",
+	"But life, relentless in its unpredictability, spared no one * not except Jane. Four years of fragile normalcy passed. Then, on an otherwise ordinary evening, an unexpectable happened: Jason collapsed without warning, his heart giving out before the ambulance could even arrive. Just like that, a Cardiac Arrest and Gone. No warnings. No goodbyes. Jane lost another loved one of her life. Maybe She jsut can never get along with the number 4...",
 	
-	"For a months after Jason's death, Jane neary withdrew from the world. She took a year off from university and barricaded herself in her apartment, shutting out contact with equal determination. The door stayed locked. Friends and family came knocking, only to be met with silence. Luan, however, the only people that Jane allowed to visit, with Jane's apartment key, moved freely through Jane's closed apartment door and Jane's self-imposed isolation...",
+	"For a months after Jason's death, Jane neary withdrew from the world. She took a year off from school and barricaded herself in her apartment, shutting out contact with equal determination. The door stayed locked. Friends and family came knocking, only to be met with silence. Luan, however, the only people that Jane allowed to visit, with Jane's apartment key, moved freely through Jane's closed apartment door and Jane's self-imposed isolation...",
 	
-	"Luan visited Jane every day, bringing fresh flowers for her and cat food for you. She sang to Jane, did her university homework at Jane's place while keeping her company, shared funny stories from school, drew pictures for her, taught her how to mix cocktails... She tried everything related to Jane's hobbies to gently coax her back into experiencing the world.",
+	"Luan visited Jane every day, bringing fresh flowers for her and cat food for you. She sang to Jane, did her work at Jane's place while keeping her company, shared funny stories from school, drew pictures for her, taught her how to mix cocktails... She tried everything related to Jane's hobbies to gently coax her back into experiencing the world.",
 	
 	"Deep inside, the moment Jason died, Luan felt an electric rush of relief * finally, she was once again the most important person in Jane's life. But watching Jane unravel in grief infuriated her. Why should she mourn so deeply for a dead man? Yet when Jane refused to see anyone except her, Luan's bitterness gave way to perverse satisfaction.",
 	
