@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_talk_1",
+  "%Name":"snd_err",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.29160997,
-  "name":"snd_talk_1",
+  "duration":0.23136054,
+  "name":"snd_err",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_talk_1.wav",
+  "soundFile":"snd_err.mp3",
   "type":0,
   "volume":1.0,
 }

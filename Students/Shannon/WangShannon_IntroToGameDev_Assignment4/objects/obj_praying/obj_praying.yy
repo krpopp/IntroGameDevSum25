@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vendorstand",
+  "%Name":"obj_praying",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_vendorstand",
+  "name":"obj_praying",
   "overriddenProperties":[],
   "parent":{
-    "name":"game",
-    "path":"folders/Objects/game.yy",
+    "name":"start screen",
+    "path":"folders/Objects/start screen.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_vendorstand",
-    "path":"sprites/spr_vendorstand/spr_vendorstand.yy",
+    "name":"spr_praying_animation",
+    "path":"sprites/spr_praying_animation/spr_praying_animation.yy",
   },
   "spriteMaskId":null,
   "visible":true,

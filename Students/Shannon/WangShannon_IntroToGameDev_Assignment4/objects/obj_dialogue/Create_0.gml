@@ -34,13 +34,18 @@ function activate_dialogue1() {
 	if (keyboard_check_pressed(vk_space) && in_range1 && !global.dialogue_open1) {
 		audio_play_sound(snd_talk, 0, false);
 		global.dialogue_open1 = true;
-		global.cult_invite = false;
 	}
 }
 
 function close_dialogue1() {
 	if ((abs(obj_player.x - obj_npc1.x) > 30 || abs(obj_player.y - obj_npc1.y) > 30) && global.dialogue_open1) {
 		global.dialogue_open1 = false;
+		global.cult_invite = false;
+		
+		if (global.chocolate_bought) {
+			audio_stop_all();
+			room_goto(rm_start);
+		}
 	}
 }
 

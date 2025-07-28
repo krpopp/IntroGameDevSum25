@@ -5,8 +5,8 @@ player_spd = 1.2;
 player_idle = true;
 player_dir = "down";
 image_speed = 0;
-//image_xscale = 0.9;
-//image_yscale = 0.9;
+image_xscale = 0.9;
+image_yscale = 0.9;
 
 // walk animation
 walk_timer = 5;
@@ -17,7 +17,7 @@ left_anim = [9, 10, 11, 8];
 right_anim = [13, 14, 15, 12];
 
 // collision checks
-coll_objs = [obj_vendorstand, obj_npc1, obj_npc2, obj_npc3];
+coll_objs = [obj_vendor_stand, obj_npc1, obj_npc2, obj_npc3];
 can_move_down = true;
 can_move_up = true;
 can_move_right = true;
@@ -35,6 +35,7 @@ function walk() {
 	if (anim < 3) {
 		anim++;
 	}
+
 	else {
 		anim = 0;
 	}
@@ -42,8 +43,9 @@ function walk() {
 
 function update() {
 	player_movement();
-	player_animation();;
+	player_animation();
 	check_collisions();
+	footsteps();
 }
 
 function player_movement() {
@@ -124,4 +126,10 @@ function check_collisions() {
 	can_move_up = array_contains(_up_array, false) ? false : true;
 	can_move_right = array_contains(_right_array, false) ? false : true;
 	can_move_left = array_contains(_left_array, false) ? false : true;
+}
+
+function footsteps() {
+	if (!audio_is_playing(snd_footstep) && (image_index == 2 || image_index == 6 || image_index == 10 || image_index == 14)) {
+		audio_play_sound(snd_footstep, 0, false);
+	}
 }
