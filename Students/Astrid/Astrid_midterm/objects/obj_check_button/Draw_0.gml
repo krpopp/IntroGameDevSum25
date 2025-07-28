@@ -1,5 +1,5 @@
 var btn_text = "Check";
-var text_x = x + 22;
+var text_x = x + 23;
 var text_y = y + 30;
 
 draw_set_color(c_black);
