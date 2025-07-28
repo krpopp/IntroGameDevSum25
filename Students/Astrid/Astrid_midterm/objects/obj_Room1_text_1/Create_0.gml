@@ -3,7 +3,7 @@ page_texts = [
 
 	" <<< Hello there, little one. I am Death. Stop looking, you can't see me. I'm here to guide you to the afterlife. However... it seems you've forgotten everything, including how you died. I cannot lead you onward if you cannot tell the cuase of your death. So, yeah, try remember! >>>",
 	
-	"Rules: Drag the pictures on the left side of the screen to the blank squares on the main screen area. Each picture descirbes a single incident, and every incident leads to another, and finally to your cause of death. Use the check Button to see how many cards are on the correct position",
+	"Rules: Drag the pictures on the left side of the screen to the blank squares on the main screen area. Each picture descirbes a single incident, and each incident leads to the another, and finally to your cause of death. Use the check Button to see how many cards are on the correct position",
 
 	"If you are ready, press [SPACE] to start exploring."
 ];
