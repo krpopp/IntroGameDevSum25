@@ -1,7 +1,7 @@
 
 draw_set_color(c_black);
-draw_text_ext(x + 40, y + 40, 
-             pair_id, 20, sprite_width - 20);
+//draw_text_ext(x + 40, y + 40, 
+//             pair_id, 20, sprite_width - 20);
 			 
 if (!should_blink) {
     draw_sprite_ext(sprite_index, image_index, 
