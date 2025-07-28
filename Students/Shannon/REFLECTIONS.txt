@@ -41,5 +41,23 @@ for this project im going to see if i can use up an extension and fix that
 update: i tried using the debugger and after a lot of tries, i couldn't find what caused the glitch so i'll just turn in the project. i was able to get one card
 to properly discard after being played but idk where the other ones were coming from and it just didn't make sense
 
+--------
+
+assignment 4
+
+im actually glad this is a project because i was able to add things w creative liberty so yayy!! so i had a bunch of pixel art OCs i drew recently for a passion project
+so i imported those and animated their body parts using GML draw to make them move, then i created the little mini-pixel art sprites for all of them and gave them idle animations
+
+i used aseprite to draw everything, and freesound.org/youtube royalty free audio for sfx! the story is relatively simple but i tried adding as much detail as possible,
+such as interactions for all cases. if you press space next to both girls, they have a little musing. if you press on them before getting chocolate (you have to be
+close), they react to you presenting your cult advertisement to them. you have to trigger the office-siren looking girl's reaction before you can buy chocolate.
+if you press on the doctor after getting chocolate, she'll sorta insult you, but if you press on the office siren girl, she'll be super happy and you basically win
+
+the story is super simple, silly and stupid, kind of like the little narrative games i used to make on scratch as a teenager :) 
+
+making the idle animations was a little challenging for me bc i wouldn't consider myself the best animator, but they turned out cute so im pretty happy.
+also i made the cultist's sprite too large on accident, and it felt like too much work to redo him so i just scaled him down, but i'm using this as a lesson
+to always compare relative sizes 
+
 
 
