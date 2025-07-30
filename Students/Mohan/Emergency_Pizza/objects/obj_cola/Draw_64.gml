@@ -1,0 +1,1 @@
+draw_sprite(spr_cola, 0, 150, 10);  

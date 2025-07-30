@@ -1,27 +1,25 @@
 if (is_showing) {
-    // Draw DARKER black background
+    // Black background
     draw_set_alpha(0.95);
     draw_set_color(c_black);
     draw_rectangle(0, room_height - box_height, room_width, room_height, false);
     
-    // Draw WHITE BORDER INSIDE the black box
+    // White border
     draw_set_alpha(1);
     draw_set_color(c_white);
-    var border_offset = 5; // Distance from edge of black box
+    var border_offset = 5;
     draw_rectangle(border_offset, 
                    room_height - box_height + border_offset, 
                    room_width - border_offset, 
                    room_height - border_offset, 
-                   true); // true = outline only
-    
-    // Optional: Double border for more style
+                   true);
     draw_rectangle(border_offset + 2, 
                    room_height - box_height + border_offset + 2, 
                    room_width - border_offset - 2, 
                    room_height - border_offset - 2, 
                    true);
-    
-    // Draw text with your font
+
+    // Text
     draw_set_font(fnt_main);
     draw_set_color(c_white);
     draw_set_halign(fa_left);
@@ -30,7 +28,7 @@ if (is_showing) {
                   text_array[current_text], 
                   25, room_width - (text_margin * 2));
     
-    // Draw instruction
+    // Navigation tip
     draw_set_color(c_yellow);
     draw_set_halign(fa_right);
     draw_set_valign(fa_bottom);
@@ -39,9 +37,13 @@ if (is_showing) {
     } else {
         draw_text(room_width - text_margin, room_height - 10, "Press ENTER to close >");
     }
-    
-    // Reset alignment and font
+
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_font(-1);
+}
+
+if (show_choices) {
+    draw_text(room_width / 2 - 100, room_height - 60, "1. Veggie Pizza");
+    draw_text(room_width / 2 - 100, room_height - 30, "2. Meat Pizza");
 }
