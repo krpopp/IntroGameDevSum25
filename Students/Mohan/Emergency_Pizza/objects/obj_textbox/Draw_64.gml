@@ -41,9 +41,20 @@ if (is_showing) {
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     draw_set_font(-1);
+	
+	if (show_choices) {
+	    draw_set_font(fnt_main); 
+	    draw_set_color(c_yellow);
+	    draw_set_halign(fa_left);
+	    draw_set_valign(fa_top);
+
+		var choice_x = 440;              // more to the right
+		var choice_y_start = room_height - 140; // higher up
+
+		draw_text(choice_x, choice_y_start, "1. Veggie Pizza");
+		draw_text(choice_x, choice_y_start + 32, "2. Meat Pizza");
+
+	    draw_set_font(-1); // reset to default if needed
+	}
 }
 
-if (show_choices) {
-    draw_text(room_width / 2 - 100, room_height - 60, "1. Veggie Pizza");
-    draw_text(room_width / 2 - 100, room_height - 30, "2. Meat Pizza");
-}

@@ -5,6 +5,7 @@ if (instance_exists(obj_player)) {
     }
 }
 
+// 🖱️ Player clicked while near this object
 if (player_nearby && mouse_check_button_pressed(mb_left)) {
     if (position_meeting(mouse_x, mouse_y, id)) {
         
@@ -24,7 +25,6 @@ if (player_nearby && mouse_check_button_pressed(mb_left)) {
             textbox.text_array[0] = "You found: " + item_name;
             textbox.text_array[1] = item_desc;
 
-            // Store to global list
             array_push(global.collected_items, item_name);
 
             has_been_opened = true;
@@ -34,5 +34,17 @@ if (player_nearby && mouse_check_button_pressed(mb_left)) {
 
         textbox.current_text = 0;
         textbox.is_showing = true;
+
+        // 🔗 Track which bin opened it
+        textbox.source_bin_id = id;
+    }
+}
+
+// 🚪 Auto-close textbox if player walks away from this bin
+var textbox = instance_find(obj_textbox, 0);
+if (textbox != noone && textbox.is_showing && textbox.source_bin_id == id) {
+    if (distance_to_object(obj_player) > interaction_range) {
+        textbox.is_showing = false;
+        textbox.current_text = 0;
     }
 }
