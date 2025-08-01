@@ -4,7 +4,7 @@ with (obj_textbox_controller) {
     if (is_showing) {
         var box_height = 160;
         var text_margin = 20;
-        var vertical_offset = 130; // move the whole box up
+        var vertical_offset = 130; 
 
         var box_top = room_height - box_height - vertical_offset;
         var box_bottom = room_height - vertical_offset;

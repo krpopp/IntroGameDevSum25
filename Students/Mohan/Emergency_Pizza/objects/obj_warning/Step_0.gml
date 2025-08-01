@@ -30,6 +30,7 @@ if (instance_exists(obj_player)) {
             }
             else if (warning_stage == 2) {
                 if (textbox_instance != noone) {
+					audio_play_sound(snd_punch, 1, false);
                     with (textbox_instance) instance_destroy();
                 }
                 instance_destroy(); 

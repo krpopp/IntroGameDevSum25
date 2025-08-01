@@ -1,3 +1,18 @@
+var is_moving = (hsp != 0 || vsp != 0);
+var on_stair = place_meeting(x, y + 1, obj_ladder);
+
+if (is_moving) {
+    var sound_to_play = on_stair ? snd_stairs : snd_walk;
+
+    if (!audio_is_playing(sound_to_play)) {
+        audio_stop_all(); 
+        audio_play_sound(sound_to_play, 1, true);
+    }
+} else {
+    audio_stop_sound(snd_walk);
+    audio_stop_sound(snd_stairs);
+}
+
 key_left   = keyboard_check(ord("A"));
 key_right  = keyboard_check(ord("D"));
 key_up     = keyboard_check(ord("W"));

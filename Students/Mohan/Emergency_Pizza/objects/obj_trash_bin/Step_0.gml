@@ -20,6 +20,8 @@ if (player_nearby && mouse_check_button_pressed(mb_left) && position_meeting(mou
         text_array = [];
 
         if (!other.has_been_opened) {
+			audio_play_sound(snd_rubbish, 1, false);
+			
             other.item_index = irandom(array_length(other.item_names) - 1);
             var item_name = other.item_names[other.item_index];
             var item_desc = other.item_descriptions[other.item_index];

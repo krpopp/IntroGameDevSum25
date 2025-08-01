@@ -1,0 +1,1 @@
+was_touching = false;

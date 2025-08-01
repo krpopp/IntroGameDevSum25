@@ -1,4 +1,3 @@
-// Initialize variables
 box_height = 160;
 text_margin = 20;
 text_array = [];
@@ -10,7 +9,8 @@ close_callback_object = noone;
 source_object = noone;
 source_bin_id = noone;
 source_object = noone;
-// Ensure global flag is defined
+interaction_range = 64;
+
 if (!variable_global_exists("has_seen_intro")) {
     global.has_seen_intro = false;
 }

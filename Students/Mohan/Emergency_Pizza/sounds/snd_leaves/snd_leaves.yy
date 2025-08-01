@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_walk",
+  "%Name":"snd_leaves",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.49843538,
-  "name":"snd_walk",
+  "duration":1.7240816,
+  "name":"snd_leaves",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_walk.wav",
+  "soundFile":"snd_leaves.mp3",
   "type":0,
   "volume":1.0,
 }

@@ -14,6 +14,6 @@ if (global.timer_active) {
     if (global.time_remaining <= 0) {
         global.time_remaining = 0;
         global.timer_active = false;
-        room_restart(); // or room_goto(rm_fail);
+        room_restart();
     }
 }

@@ -6,7 +6,6 @@ if (global.start) {
         fail_timer = 0;
     }
 
-    // Check if the player has a heater
     var has_heater_index = -1;
     if (is_array(global.collected_items)) {
         for (var i = 0; i < array_length(global.collected_items); i++) {

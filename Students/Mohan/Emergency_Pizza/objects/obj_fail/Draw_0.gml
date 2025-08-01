@@ -16,13 +16,11 @@ if (show_menu) {
     for (var i = 0; i < array_length(options); i++) {
         var text_y = base_y + i * line_spacing;
 
-        // Draw arrow on the left
         if (i == selected_index) {
             draw_set_halign(fa_right);
             draw_text(x_center - 200, text_y, ">");
         }
 
-        // Draw option text
         draw_set_halign(fa_center);
         draw_text(x_center, text_y, options[i]);
     }

@@ -5,12 +5,14 @@ if (instance_exists(obj_player)) {
         var tb = instance_find(obj_textbox, 0);
 
         if (tb == noone || tb.source_object == id || !tb.is_showing) {
-            if (tb == noone) {
+            audio_play_sound(snd_robot, 1, false);
+			
+			if (tb == noone) {
                 tb = instance_create_layer(x, y - 100, "Instances", obj_textbox);
             }
 
             if (!global.has_chosen) {
-                tb.text_array[0] = "Which pizza to pick up?";
+                tb.text_array[0] = "Which pizza pick?";
                 tb.current_text = 0;
                 tb.show_choices = true;
                 tb.choice_callback_object = id;

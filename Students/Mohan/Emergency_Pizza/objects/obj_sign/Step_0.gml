@@ -21,6 +21,6 @@ if (player_near && player_clicked) {
         ];
         current_text = 0;
         is_showing = true;
-        source_object = other; // <-- this is the key line
+        source_object = other; 
     }
 }
