@@ -4,10 +4,10 @@ key_up     = keyboard_check(ord("W"));
 key_down   = keyboard_check(ord("S"));
 key_sprint = keyboard_check(vk_shift);
 
-if (key_sprint) {
+if (key_sprint & global.has_speedup) {
     sprint_timer += 1 / room_speed;
     var level = floor(sprint_timer);
-    current_speed = base_speed + (max_speed - base_speed) * min(level / 4, 1);
+    current_speed = base_speed + (max_speed - base_speed) * min(level / 6, 1);
 } else {
     sprint_timer = 0;
     current_speed = base_speed;

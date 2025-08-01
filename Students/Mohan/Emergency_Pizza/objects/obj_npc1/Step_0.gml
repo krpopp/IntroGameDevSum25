@@ -9,17 +9,20 @@ if (instance_exists(obj_player)) {
                 tb = instance_create_layer(x, y - 100, "Instances", obj_textbox);
             }
 
-            if (!has_chosen) {
-                tb.text_array[0] = "Do you know which pizza to pick up now?";
+            if (!global.has_chosen) {
+                tb.text_array[0] = "Which pizza to pick up?";
                 tb.current_text = 0;
                 tb.show_choices = true;
                 tb.choice_callback_object = id;
                 tb.source_object = id;
+				global.has_chosen = true;
+				global.start = true;
             } else {
-                tb.text_array[0] = "Hurry up and deliver the pizza!";
+                tb.text_array[0] = "Hurry up and deliver the pizza! Remember to deliver to red house on right.";
                 tb.current_text = 0;
                 tb.show_choices = false;
                 tb.source_object = id;
+				global.has_chosen = true;
             }
 
             tb.is_showing = true;

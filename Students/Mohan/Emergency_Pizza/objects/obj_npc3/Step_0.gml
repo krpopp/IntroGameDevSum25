@@ -9,9 +9,9 @@ if (instance_exists(obj_player)) {
                 tb = instance_create_layer(x, y - 100, "Instances", obj_textbox);
             }
 
-            tb.text_array[0] = "You should talk to the Delivery Manager—they know which pizza to bring.";
+            tb.text_array[0] = "You should talk to the short yellow guy on top—they know which pizza to bring.";
             tb.text_array[1] = "Also, I’ve heard people sometimes toss useful tools in the trash bins.";
-            tb.text_array[2] = "Might be worth checking before you leave!";
+            tb.text_array[2] = "Might be worth checking before you leave! Remember to deliver pizza to red house on right.";
             tb.current_text = 0;
             tb.show_choices = false;
             tb.source_object = id;

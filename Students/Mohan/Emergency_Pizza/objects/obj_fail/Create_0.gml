@@ -1,6 +1,11 @@
-// CREATE EVENT
-message_y = -100; // Start above screen
-message_target_y = room_height/2;
-slide_speed = 5;
-show_details = false;
-details_timer = 60; // Wait 1 second before showing details
+title_y = room_height / 2;
+move_up = true;
+
+options = ["Try again!", "Quit"];
+selected_index = 0;
+arrow_x_offset = -40;
+
+show_menu = false;
+
+audio_play_sound(snd_fail, 1, false);
+
