@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         transform.position = transform.localPosition;
-        speed = 0.8f;
+        speed = 0.5f;
         rb = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
     }
