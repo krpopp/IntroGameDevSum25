@@ -58,36 +58,7 @@ public class SceneSetupHelper : MonoBehaviour
         bgRect.offsetMin = Vector2.zero;
         bgRect.offsetMax = Vector2.zero;
         
-        GameObject titleObj = new GameObject("TitleText");
-        titleObj.transform.SetParent(mainMenuPanel.transform, false);
-        Text titleText = titleObj.AddComponent<Text>();
-        titleText.text = gameTitle;
-        titleText.color = titleColor;
-        titleText.fontSize = 72;
-        titleText.alignment = TextAnchor.MiddleCenter;
-        titleText.fontStyle = FontStyle.Bold;
-        titleText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
         
-        RectTransform titleRect = titleText.rectTransform;
-        titleRect.anchorMin = new Vector2(0.1f, 0.6f);
-        titleRect.anchorMax = new Vector2(0.9f, 0.9f);
-        titleRect.offsetMin = Vector2.zero;
-        titleRect.offsetMax = Vector2.zero;
-        
-        GameObject startTextObj = new GameObject("StartText");
-        startTextObj.transform.SetParent(mainMenuPanel.transform, false);
-        Text startText = startTextObj.AddComponent<Text>();
-        startText.text = "Press SPACE or Click to Start";
-        startText.color = startTextColor;
-        startText.fontSize = 36;
-        startText.alignment = TextAnchor.MiddleCenter;
-        startText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-        
-        RectTransform startRect = startText.rectTransform;
-        startRect.anchorMin = new Vector2(0.1f, 0.3f);
-        startRect.anchorMax = new Vector2(0.9f, 0.5f);
-        startRect.offsetMin = Vector2.zero;
-        startRect.offsetMax = Vector2.zero;
         
         GameObject instructionsObj = new GameObject("InstructionsText");
         instructionsObj.transform.SetParent(mainMenuPanel.transform, false);
@@ -96,7 +67,7 @@ public class SceneSetupHelper : MonoBehaviour
         instructionsText.color = Color.gray;
         instructionsText.fontSize = 24;
         instructionsText.alignment = TextAnchor.MiddleCenter;
-        instructionsText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        instructionsText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         
         RectTransform instructionsRect = instructionsText.rectTransform;
         instructionsRect.anchorMin = new Vector2(0.1f, 0.1f);
@@ -115,7 +86,7 @@ public class SceneSetupHelper : MonoBehaviour
         buttonText.color = Color.white;
         buttonText.fontSize = 28;
         buttonText.alignment = TextAnchor.MiddleCenter;
-        buttonText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        buttonText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         
         RectTransform buttonRect = startButtonObj.GetComponent<RectTransform>();
         buttonRect.anchorMin = new Vector2(0.35f, 0.15f);
@@ -134,7 +105,7 @@ public class SceneSetupHelper : MonoBehaviour
         quitButtonText.color = Color.white;
         quitButtonText.fontSize = 28;
         quitButtonText.alignment = TextAnchor.MiddleCenter;
-        quitButtonText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        quitButtonText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         
         RectTransform quitButtonRect = quitButtonObj.GetComponent<RectTransform>();
         quitButtonRect.anchorMin = new Vector2(0.35f, 0.05f);
@@ -161,7 +132,7 @@ public class SceneSetupHelper : MonoBehaviour
         loadingText.color = Color.white;
         loadingText.fontSize = 48;
         loadingText.alignment = TextAnchor.MiddleCenter;
-        loadingText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        loadingText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         
         RectTransform loadingTextRect = loadingText.rectTransform;
         loadingTextRect.anchorMin = new Vector2(0.1f, 0.4f);
@@ -169,20 +140,10 @@ public class SceneSetupHelper : MonoBehaviour
         loadingTextRect.offsetMin = Vector2.zero;
         loadingTextRect.offsetMax = Vector2.zero;
         
-        GameObject controllerObj = new GameObject("OpeningSceneController");
-        OpeningSceneController controller = controllerObj.AddComponent<OpeningSceneController>();
+        GameObject controllerObj = new GameObject("OpeningController");
+        OpeningScreen controller = controllerObj.AddComponent<OpeningScreen>();
         
-        controller.titleText = titleText;
-        controller.startText = startText;
-        controller.instructionsText = instructionsText;
-        controller.startButton = startButton;
-        controller.quitButton = quitButton;
-        controller.canvas = canvas;
-        controller.mainMenuPanel = mainMenuPanel;
-        controller.loadingPanel = loadingPanel;
-        controller.gameTitle = gameTitle;
         
-        Debug.Log("UI setup completed!");
     }
     
     void SetupCamera()
@@ -200,7 +161,6 @@ public class SceneSetupHelper : MonoBehaviour
         mainCamera.orthographic = true;
         mainCamera.orthographicSize = 5f;
         
-        Debug.Log("Camera setup completed!");
     }
     
     #if UNITY_EDITOR
@@ -217,7 +177,6 @@ public class SceneSetupHelper : MonoBehaviour
         helper.SetupUI();
         helper.SetupCamera();
         
-        Debug.Log("Opening scene setup completed from menu!");
     }
     #endif
 }

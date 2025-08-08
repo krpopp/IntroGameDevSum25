@@ -28,7 +28,6 @@ public class SpriteQualityFixer : MonoBehaviour
             }
         }
         
-        Debug.Log($"Fixed sprite quality for {spriteRenderers.Length} sprite renderers");
     }
     
     [ContextMenu("Fix Sprite Quality Now")]

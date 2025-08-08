@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,9 +8,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1.5f;
     
     [Header("Interaction Settings")]
-    public float responsiveRange = 65f;
-    public float keyPickupDistance = 24f;
-    public float doorCheckDistance = 3f;
+    [FormerlySerializedAs("responsiveRange")]
+    public float interactionRange = 3f;
     
     [Header("Animation")]
     public SpriteRenderer spriteRenderer;
@@ -122,8 +122,6 @@ public class PlayerController : MonoBehaviour
             {
                 AddItem("key");
                 AudioManager.Instance?.PlaySound("key");
-                Debug.Log("Key picked up!");
-                Debug.Log($"Inventory now contains: {string.Join(", ", inventory)}");
                 Destroy(key.gameObject);
                 break;
             }
@@ -136,42 +134,56 @@ public class PlayerController : MonoBehaviour
         if (dialogueSystem == null) return;
         
         NPC[] npcs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
-        NPC nearestOrange = null;
-        NPC nearestBrown = null;
-        float closestOrangeDistance = float.MaxValue;
-        float closestBrownDistance = float.MaxValue;
-        
-        foreach (NPC npc in npcs)
+        NPC npcOrange = null;
+        NPC npcBrown = null;
+        float dOrange = float.MaxValue;
+        float dBrown = float.MaxValue;
+        foreach (var npc in npcs)
         {
-            float distance = Vector2.Distance(transform.position, npc.transform.position);
-            if (npc.npcType == "orange" && distance < closestOrangeDistance)
+            float d = Vector2.Distance(transform.position, npc.transform.position);
+            if (npc.npcType == "orange")
             {
-                closestOrangeDistance = distance;
-                nearestOrange = npc;
+                if (d < dOrange) { dOrange = d; npcOrange = npc; }
             }
-            else if (npc.npcType == "brown" && distance < closestBrownDistance)
+            else if (npc.npcType == "brown")
             {
-                closestBrownDistance = distance;
-                nearestBrown = npc;
+                if (d < dBrown) { dBrown = d; npcBrown = npc; }
             }
         }
-        
-        if (nearestOrange != null && closestOrangeDistance < responsiveRange)
+
+        bool showText = false;
+
+        if (npcOrange != null && dOrange < interactionRange)
         {
+            showText = true;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                string dialogueText = HasItem("key") 
+                string line = HasItem("key")
                     ? "Great. My friend will tell you how to escape this place."
                     : "The key is some way to the east of here.";
-                dialogueSystem.ShowDialogue(nearestOrange.transform, dialogueText);
+                dialogueSystem.ShowDialogue(npcOrange.transform, line);
             }
         }
-        else if (nearestBrown != null && closestBrownDistance < responsiveRange)
+        else if (npcBrown != null && dBrown < interactionRange)
         {
+            showText = true;
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                dialogueSystem.ShowDialogue(nearestBrown.transform, "The exit is north of here, hidden behind a tree.");
+                dialogueSystem.ShowDialogue(npcBrown.transform, "The exit is north of here, hidden behind a tree.");
             }
+        }
+
+        if (dialogueSystem.IsVisible() && dialogueSystem.CurrentNPC != null)
+        {
+            float dActive = Vector2.Distance(transform.position, dialogueSystem.CurrentNPC.position);
+            if (dActive > interactionRange)
+            {
+                dialogueSystem.HideDialogue();
+            }
+        }
+        else if (!showText && dialogueSystem.IsVisible())
+        {
+            dialogueSystem.HideDialogue();
         }
     }
 

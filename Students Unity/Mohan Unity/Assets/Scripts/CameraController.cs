@@ -28,7 +28,6 @@ public class CameraController : MonoBehaviour
         mainCamera = GetComponent<Camera>();
         if (mainCamera == null)
         {
-            Debug.LogError("CameraController: No Camera component found!");
             return;
         }
         
@@ -53,12 +52,6 @@ public class CameraController : MonoBehaviour
             {
                 transform.position = targetPosition;
             }
-            
-            Debug.Log($"CameraController: Found player at {playerTransform.position}, camera set to {transform.position}");
-        }
-        else
-        {
-            Debug.LogWarning("CameraController: No player found! Camera won't follow.");
         }
     }
     
@@ -68,11 +61,6 @@ public class CameraController : MonoBehaviour
         if (player != null)
         {
             playerTransform = player.transform;
-            Debug.Log($"CameraController: Player found at {playerTransform.position}");
-        }
-        else
-        {
-            Debug.LogError("CameraController: No PlayerController found in scene!");
         }
     }
     
@@ -92,28 +80,6 @@ public class CameraController : MonoBehaviour
         
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
-        
-        if (showDebugInfo && Time.frameCount % 60 == 0)
-        {
-            Debug.Log($"Camera following: Player at {playerTransform.position}, Camera at {transform.position}, Target at {targetPosition}");
-        }
-        
-        if (showDebugInfo)
-        {
-            NPC[] npcs = FindObjectsByType<NPC>(FindObjectsSortMode.None);
-            foreach (NPC npc in npcs)
-            {
-                Vector3 viewportPoint = mainCamera.WorldToViewportPoint(npc.transform.position);
-                bool isVisible = viewportPoint.x >= 0 && viewportPoint.x <= 1 && 
-                               viewportPoint.y >= 0 && viewportPoint.y <= 1 && 
-                               viewportPoint.z > 0;
-                
-                if (!isVisible)
-                {
-                    Debug.LogWarning($"NPC {npc.npcType} is outside camera view! Viewport: {viewportPoint}");
-                }
-            }
-        }
     }
     
     void OnDrawGizmosSelected()
@@ -139,7 +105,6 @@ public class CameraController : MonoBehaviour
         {
             mainCamera.orthographicSize = newSize;
             orthographicSize = newSize;
-            Debug.Log($"CameraController: Orthographic size changed to {newSize}");
         }
     }
     
@@ -152,8 +117,6 @@ public class CameraController : MonoBehaviour
         
         float elapsed = 0f;
         float duration = Mathf.Max(0.1f, introDuration);
-        
-        Debug.Log($"Starting intro animation: {startPosition} -> {endPosition}");
         
         while (elapsed < duration)
         {
@@ -168,8 +131,6 @@ public class CameraController : MonoBehaviour
         
         transform.position = endPosition;
         introComplete = true;
-        
-        Debug.Log("Intro animation complete! Camera now following player.");
     }
     
     void OnValidate()
@@ -196,6 +157,6 @@ public class CameraController : MonoBehaviour
         mainCamera.nearClipPlane = 0.1f;
         mainCamera.farClipPlane = 1000f;
         
-        Debug.Log("Camera blur settings applied for pixel-perfect rendering");
+        
     }
 }

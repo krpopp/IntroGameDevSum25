@@ -69,7 +69,6 @@ public class StartScreenController : MonoBehaviour
         
         SetBlackBackground();
         
-        Debug.Log("Start screen initialized");
     }
     
     void SetBlackBackground()
@@ -105,7 +104,6 @@ public class StartScreenController : MonoBehaviour
     void StartGame()
     {
         gameStarted = true;
-        Debug.Log("Starting game...");
         
         ShowGameObjects();
         HideStartScreen();

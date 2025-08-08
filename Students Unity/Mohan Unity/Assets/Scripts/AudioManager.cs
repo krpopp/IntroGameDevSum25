@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 
 public class AudioManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip exitSound;
     public AudioClip talkSound;
     
-    private Dictionary<string, AudioClip> soundClips = new Dictionary<string, AudioClip>();
+    [FormerlySerializedAs("soundClips")]
+    private Dictionary<string, AudioClip> soundNameToClip = new Dictionary<string, AudioClip>();
     
     public static AudioManager Instance { get; private set; }
     
@@ -33,10 +35,10 @@ public class AudioManager : MonoBehaviour
     
     void InitializeAudioManager()
     {
-        soundClips["key"] = keyPickupSound;
-        soundClips["door"] = doorOpenSound;
-        soundClips["exit"] = exitSound;
-        soundClips["talk"] = talkSound;
+        soundNameToClip["key"] = keyPickupSound;
+        soundNameToClip["door"] = doorOpenSound;
+        soundNameToClip["exit"] = exitSound;
+        soundNameToClip["talk"] = talkSound;
         
         if (musicSource == null)
         {
@@ -52,9 +54,9 @@ public class AudioManager : MonoBehaviour
     
     public void PlaySound(string soundName)
     {
-        if (soundClips.ContainsKey(soundName))
+        if (soundNameToClip.ContainsKey(soundName))
         {
-            sfxSource.PlayOneShot(soundClips[soundName]);
+            sfxSource.PlayOneShot(soundNameToClip[soundName]);
         }
         else
         {

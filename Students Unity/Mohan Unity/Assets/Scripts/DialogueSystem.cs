@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -7,169 +8,131 @@ public class DialogueSystem : MonoBehaviour
     public GameObject dialogueBox;
     public Text dialogueText;
     public Canvas canvas;
-    
+    [Tooltip("Sorting order for the dialogue canvas so it renders above everything")] public int uiSortingOrder = 1000;
+
     [Header("Dialogue Settings")]
     public float boxWidth = 570f;
     public float boxHeight = 150f;
-    public float padding = 15f;
     public float screenMargin = 10f;
-    public float npcOffsetY = 80f;
-    
-    private bool isVisible = false;
+    [FormerlySerializedAs("gapAboveHeadPx")]
+    [Tooltip("Pixel gap between NPC head and the bottom edge of the textbox")] public float gapAboveHeadPixels = 8f;
+    [Tooltip("Optional child transform to follow for precise placement")] public string anchorChildName = "HeadAnchor";
+
+    private bool isVisible;
     private Transform currentNPC;
-    private string currentText = "";
+    private Transform anchorTransform;
     private RectTransform dialogueRect;
-    private Image dialogueImage;
-    
+
     void Start()
     {
         isVisible = false;
         currentNPC = null;
-        currentText = "";
-        if (dialogueBox != null)
-        {
-            dialogueBox.SetActive(false);
-        }
+        if (dialogueBox != null) dialogueBox.SetActive(false);
 
         if (dialogueBox != null && dialogueRect == null)
             dialogueRect = dialogueBox.GetComponent<RectTransform>();
-
         if (canvas == null && dialogueBox != null)
             canvas = dialogueBox.GetComponentInParent<Canvas>();
         if (canvas == null)
             canvas = GetComponentInParent<Canvas>();
-        
-        if (canvas != null)
-        {
-            canvas.renderMode = RenderMode.ScreenSpaceCamera;
-            
-            if (canvas.worldCamera == null)
-            {
-                canvas.worldCamera = Camera.main;
-                Debug.Log("DIALOGUE: Assigned Main Camera to Canvas");
-            }
-            
-            if (canvas.worldCamera == null)
-            {
-                Debug.LogError("DialogueSystem: No camera found! Canvas needs a camera for proper positioning.");
-            }
-            else
-            {
-                Debug.Log($"DIALOGUE: Canvas render mode: {canvas.renderMode}, Camera: {canvas.worldCamera.name}");
-            }
-            
-            if (!canvas.gameObject.activeInHierarchy)
-            {
-                Debug.LogWarning("DIALOGUE: Canvas is not active! This might cause issues.");
-            }
-        }
-        
-        if (dialogueBox != null)
-        {
-            dialogueImage = dialogueBox.GetComponent<Image>();
-            if (dialogueImage != null)
-            {
-                dialogueImage.color = new Color(0, 0, 0, 1);
-            }
-        }
-        
+
         if (dialogueRect != null)
         {
             dialogueRect.sizeDelta = new Vector2(boxWidth, boxHeight);
-            
             dialogueRect.anchorMin = new Vector2(0.5f, 0.5f);
             dialogueRect.anchorMax = new Vector2(0.5f, 0.5f);
-            dialogueRect.pivot = new Vector2(0.5f, 0.5f);
-            
+            dialogueRect.pivot = new Vector2(0.5f, 0f);
             dialogueRect.anchoredPosition = Vector2.zero;
         }
+
+        TrySetCanvasSortingOrder();
     }
-    
+
     void Update()
     {
-        if (isVisible && currentNPC != null)
-        {
-            UpdateDialoguePosition();
-        }
+        if (!isVisible || currentNPC == null) return;
+        UpdateDialoguePosition();
     }
-    
+
     public void ShowDialogue(Transform npc, string text)
     {
-        if (dialogueBox == null || dialogueText == null)
-        {
-            Debug.LogError("DialogueSystem: Missing dialogueBox or dialogueText reference.");
-            return;
-        }
-        if (canvas == null)
-        {
-            canvas = dialogueBox.GetComponentInParent<Canvas>();
-            if (canvas == null) canvas = GetComponentInParent<Canvas>();
-        }
+        if (dialogueBox == null || dialogueText == null) return;
+        if (canvas == null) canvas = dialogueBox.GetComponentInParent<Canvas>();
 
         currentNPC = npc;
-        currentText = text;
+        anchorTransform = FindChildByName(npc, anchorChildName);
         dialogueText.text = text;
-        
-        if (dialogueRect != null)
-            dialogueRect.sizeDelta = new Vector2(boxWidth, boxHeight);
-        
+        if (dialogueRect != null) dialogueRect.sizeDelta = new Vector2(boxWidth, boxHeight);
+        UpdateDialoguePosition();
+
         dialogueBox.SetActive(true);
         isVisible = true;
-        
-        Debug.Log($"DIALOGUE: Showing textbox for NPC '{npc?.name}' with text: '{text}'");
-        Debug.Log($"DIALOGUE: DialogueBox active: {dialogueBox.activeInHierarchy}, DialogueText active: {dialogueText.gameObject.activeInHierarchy}");
-        Debug.Log($"DIALOGUE: Textbox should now be visible on screen");
         AudioManager.Instance?.PlaySound("talk");
     }
-    
+
     public void HideDialogue()
     {
-        if (dialogueBox != null)
-            dialogueBox.SetActive(false);
+        if (dialogueBox != null) dialogueBox.SetActive(false);
         isVisible = false;
         currentNPC = null;
-        currentText = "";
-        Debug.Log("DIALOGUE: Hiding textbox");
+        anchorTransform = null;
     }
-    
+
     void UpdateDialoguePosition()
     {
-        if (currentNPC == null || dialogueRect == null) return;
-        
-        Camera camera = Camera.main;
-        if (camera == null) return;
-        
-        Vector3 screenPos = camera.WorldToScreenPoint(currentNPC.position);
-        
-        float npcHeight = 32f;
-        var spriteRenderer = currentNPC.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null && spriteRenderer.sprite != null)
+        if (dialogueRect == null) return;
+        Vector3 headWorld;
+        if (anchorTransform != null)
         {
-            float worldHeight = spriteRenderer.bounds.size.y;
-            Vector3 topWorld = currentNPC.position + Vector3.up * worldHeight;
-            Vector3 topScreen = camera.WorldToScreenPoint(topWorld);
-            npcHeight = Mathf.Abs(topScreen.y - screenPos.y);
+            headWorld = anchorTransform.position;
         }
-        
-        float boxX = screenPos.x - (boxWidth / 2);
-        float boxY = screenPos.y + npcHeight + npcOffsetY;
-        
-        boxX = Mathf.Clamp(boxX, screenMargin, Screen.width - boxWidth - screenMargin);
-        boxY = Mathf.Clamp(boxY, screenMargin, Screen.height - boxHeight - screenMargin);
-        
-        dialogueRect.position = new Vector2(boxX + boxWidth/2, boxY + boxHeight/2);
-        
-        Debug.Log($"DIALOGUE: Positioned textbox at screen position ({boxX + boxWidth/2}, {boxY + boxHeight/2}) (NPC world pos: {currentNPC.position})");
-        Debug.Log($"DIALOGUE: Screen bounds: {Screen.width}x{Screen.height}, Textbox size: {boxWidth}x{boxHeight}");
-        
-        if (boxX + boxWidth/2 < 0 || boxX + boxWidth/2 > Screen.width || boxY + boxHeight/2 < 0 || boxY + boxHeight/2 > Screen.height)
+        else if (currentNPC != null)
         {
-            Debug.LogWarning($"DIALOGUE: Textbox position ({boxX + boxWidth/2}, {boxY + boxHeight/2}) is outside screen bounds!");
+            var sr = currentNPC.GetComponent<SpriteRenderer>();
+            float topY = currentNPC.position.y + (sr != null ? sr.bounds.size.y : 0.5f);
+            headWorld = new Vector3(currentNPC.position.x, topY, currentNPC.position.z);
         }
+        else return;
+        Camera camParam = null;
+        if (canvas != null && canvas.renderMode == RenderMode.ScreenSpaceCamera)
+            camParam = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+        Vector3 screen = (camParam != null) ? camParam.WorldToScreenPoint(headWorld) : Camera.main.WorldToScreenPoint(headWorld);
+        screen.y += gapAboveHeadPixels;
+        float minX = screenMargin + boxWidth * 0.5f;
+        float maxX = Screen.width - (screenMargin + boxWidth * 0.5f);
+        float minY = screenMargin;
+        float maxY = Screen.height - screenMargin - boxHeight;
+        screen.x = Mathf.Clamp(screen.x, minX, maxX);
+        screen.y = Mathf.Clamp(screen.y, minY, maxY);
+        RectTransform canvasRect = canvas != null ? canvas.GetComponent<RectTransform>() : null;
+        if (canvasRect == null) return;
+        Vector2 local;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screen, camParam, out local);
+        dialogueRect.anchoredPosition = local;
     }
-    
-    public bool IsVisible()
+
+    public bool IsVisible() => isVisible;
+    public Transform CurrentNPC => currentNPC;
+
+    private Transform FindChildByName(Transform root, string name)
     {
-        return isVisible;
+        if (root == null || string.IsNullOrEmpty(name)) return null;
+        for (int i = 0; i < root.childCount; i++)
+        {
+            var c = root.GetChild(i);
+            if (c.name == name) return c;
+            var found = FindChildByName(c, name);
+            if (found != null) return found;
+        }
+        return null;
+    }
+
+    private void TrySetCanvasSortingOrder()
+    {
+        if (canvas == null) canvas = GetComponentInParent<Canvas>();
+        if (canvas == null) return;
+        canvas.overrideSorting = true;
+        canvas.sortingLayerName = "Default";
+        canvas.sortingOrder = uiSortingOrder;
     }
 }
