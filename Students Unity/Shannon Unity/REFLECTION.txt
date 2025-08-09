@@ -1,0 +1,19 @@
+unity narrative reflection:
+
+
+this project was a really good recap on unity because the last time i used it was for high school and a 2d game that was like super buggy.
+
+now i feel like i understand it a lot more and seeing how much bigger the scope is compared to gamemaker, its nice to get comfortable with it again.
+
+however i still don't understand one thing: i can't use GetKeyDown properly because fsr it sometimes doesn't register? idk if im doing something wrong or not
+but im using GetKey all the time so its registering for every single frame when something is being pressed and im somehow working around that
+
+also istg the animation was so confusing to me. like i did NOT understand it and it took a lot of research and tinkering to finally get it to click. i did not
+know you also had to manually adjust the animation transition time, so i was like : why is it lagging between transitions for like a few hours until i fINALLY
+found the dropdown menu that says "transition timer" and set it to 0. now that i finally understand it, i feel super good lol
+
+this goes the same with collision, i had no idea i had to check the "is trigger" box for the trigger thing to register. i was like "hello why aren't my debug
+messages popping up"... that was so triggering (haha) lowkey took 2 days of procrastinating and pressing random buttons to figure that out 
+
+anywy this project was honestrly so painful but im honestly glad i "finished"(?) it. if anything i learned a lot from it like lowkey i was like yeah i like gamemaker
+more because im not smart enough for unity but it forced me to actually figure out how things worked yay

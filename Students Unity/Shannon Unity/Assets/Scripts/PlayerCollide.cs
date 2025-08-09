@@ -17,6 +17,7 @@ public class PlayerCollide : MonoBehaviour
     [SerializeField] private AudioSource audioSrc;
     [SerializeField] private AudioClip audioClipDoor;
     [SerializeField] private AudioClip audioClipTalk;
+    [SerializeField] private AudioClip audioClipExit;
 
 
     // Start is called before the first frame update
@@ -50,8 +51,9 @@ public class PlayerCollide : MonoBehaviour
 
         if (collision.gameObject.name == "Exit")
         {
-
-               
+            DontDestroyOnLoad(audioSrc.gameObject);
+            audioSrc.PlayOneShot(audioClipExit);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }
 
@@ -77,12 +79,20 @@ public class PlayerCollide : MonoBehaviour
                 dial.SetActive(true);
                 //Debug.Log("testing npc dial");
                 npcTouching = collision.gameObject;
+                if (!audioSrc.isPlaying)
+                {
+                    audioSrc.PlayOneShot(audioClipTalk);
+                }
             }
             else
             {
                 dial_text.SetDialogue("Great. My friend will tell you how to escape this place.");
                 dial.SetActive(true);
                 npcTouching = collision.gameObject;
+                if(!audioSrc.isPlaying)
+                {
+                    audioSrc.PlayOneShot(audioClipTalk);
+                }
             }
 
         }
@@ -91,6 +101,10 @@ public class PlayerCollide : MonoBehaviour
             dial_text.SetDialogue("The exit is north of here, hidden behind a tree.");
             dial.SetActive(true);
             npcTouching = collision.gameObject;
+            if (!audioSrc.isPlaying)
+            {
+                audioSrc.PlayOneShot(audioClipTalk);
+            }
         }
     }
 
