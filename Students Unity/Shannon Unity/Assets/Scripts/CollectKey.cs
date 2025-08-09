@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CollectKey : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSrc;
+    [SerializeField] AudioClip collectKey;
     public bool hasKey;
+
     //private AudioSource keyAudio;
     // Start is called before the first frame update
     void Start()
@@ -17,9 +20,9 @@ public class CollectKey : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             hasKey = true;
+            audioSrc.PlayOneShot(collectKey);
             Destroy(gameObject);
             
-
         }
     }
 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerCollide : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class PlayerCollide : MonoBehaviour
     [SerializeField] private DialogueTrigger dial_text;
 
     [SerializeField] private GameObject npcTouching;
+
+    [SerializeField] private AudioSource audioSrc;
+    [SerializeField] private AudioClip audioClipDoor;
+    [SerializeField] private AudioClip audioClipTalk;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,29 +41,61 @@ public class PlayerCollide : MonoBehaviour
         {
             if (bool_key.hasKey)
             {
+                audioSrc.PlayOneShot(audioClipDoor);
                 Destroy(collision.gameObject);
+                
             }
 
         }
 
-        if (collision.gameObject.name == "NPC1")
+        if (collision.gameObject.name == "Exit")
+        {
+
+               
+
+        }
+
+        /*if (collision.gameObject.name == "NPC1")
         {
             dial_text.SetDialogue("The key is some way to the east of here.");
             dial.SetActive(true);
             Debug.Log("testing npc dial");
 
 
-        }
+        }*/
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (collision.gameObject.name == "NPC1" || collision.gameObject.name == "NPC2"))
+        Debug.Log(Input.GetKey(KeyCode.Space));
+        if (Input.GetKey(KeyCode.Space) && collision.gameObject.name == "NPC1")
+        //collision.gameObject.name == "NPC1" || collision.gameObject.name == "NPC2")
         {
-            dial_text.SetDialogue("The key is some way to the east of here.");
+            if (!bool_key.hasKey)
+            {
+                dial_text.SetDialogue("The key is some way to the east of here.");
+                dial.SetActive(true);
+                //Debug.Log("testing npc dial");
+                npcTouching = collision.gameObject;
+            }
+            else
+            {
+                dial_text.SetDialogue("Great. My friend will tell you how to escape this place.");
+                dial.SetActive(true);
+                npcTouching = collision.gameObject;
+            }
+
+        }
+        else if (Input.GetKey(KeyCode.Space) && collision.gameObject.name == "NPC2")
+        {
+            dial_text.SetDialogue("The exit is north of here, hidden behind a tree.");
             dial.SetActive(true);
-            Debug.Log("testing npc dial");
             npcTouching = collision.gameObject;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        dial.SetActive(false);
     }
 }
