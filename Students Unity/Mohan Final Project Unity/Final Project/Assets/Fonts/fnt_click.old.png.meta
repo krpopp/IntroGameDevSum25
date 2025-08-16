@@ -1,0 +1,2158 @@
+fileFormatVersion: 2
+guid: d526b1113e49dca4188d07818b634136
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -249423112947542991
+    second: fnt_click.old_0
+  - first:
+      213: -7688349146411459880
+    second: fnt_click.old_1
+  - first:
+      213: 2181224130806345863
+    second: fnt_click.old_2
+  - first:
+      213: 7576049676490888427
+    second: fnt_click.old_3
+  - first:
+      213: -5460528831427046582
+    second: fnt_click.old_4
+  - first:
+      213: 8669608036055691658
+    second: fnt_click.old_5
+  - first:
+      213: -5686052882308421137
+    second: fnt_click.old_6
+  - first:
+      213: -6026784971441623555
+    second: fnt_click.old_7
+  - first:
+      213: 8110270822773353025
+    second: fnt_click.old_8
+  - first:
+      213: -4595775112971690364
+    second: fnt_click.old_9
+  - first:
+      213: -410489470006349877
+    second: fnt_click.old_10
+  - first:
+      213: -2681836477970987185
+    second: fnt_click.old_11
+  - first:
+      213: -6411838314923683621
+    second: fnt_click.old_12
+  - first:
+      213: 7835959361800865459
+    second: fnt_click.old_13
+  - first:
+      213: 1946333012275681732
+    second: fnt_click.old_14
+  - first:
+      213: -5977667015086388185
+    second: fnt_click.old_15
+  - first:
+      213: -8263971587377166378
+    second: fnt_click.old_16
+  - first:
+      213: -5333803958601211305
+    second: fnt_click.old_17
+  - first:
+      213: -8614888842488032059
+    second: fnt_click.old_18
+  - first:
+      213: 2228500160551721007
+    second: fnt_click.old_19
+  - first:
+      213: 7101016027414628088
+    second: fnt_click.old_20
+  - first:
+      213: -4490055570458887904
+    second: fnt_click.old_21
+  - first:
+      213: -825074356966550430
+    second: fnt_click.old_22
+  - first:
+      213: -2126733141928879101
+    second: fnt_click.old_23
+  - first:
+      213: -718530649398670803
+    second: fnt_click.old_24
+  - first:
+      213: -2931125429452966805
+    second: fnt_click.old_25
+  - first:
+      213: -7128871145706662451
+    second: fnt_click.old_26
+  - first:
+      213: 5832044334797838212
+    second: fnt_click.old_27
+  - first:
+      213: 4151091178128044612
+    second: fnt_click.old_28
+  - first:
+      213: -397529377338034115
+    second: fnt_click.old_29
+  - first:
+      213: 8797294985522940741
+    second: fnt_click.old_30
+  - first:
+      213: 7844126834680527125
+    second: fnt_click.old_31
+  - first:
+      213: 3866053661453277154
+    second: fnt_click.old_32
+  - first:
+      213: -1326441941732661036
+    second: fnt_click.old_33
+  - first:
+      213: -9182383529185052260
+    second: fnt_click.old_34
+  - first:
+      213: -2537636652728156288
+    second: fnt_click.old_35
+  - first:
+      213: -8851445303858514735
+    second: fnt_click.old_36
+  - first:
+      213: 831103769367158157
+    second: fnt_click.old_37
+  - first:
+      213: 3784079869856672388
+    second: fnt_click.old_38
+  - first:
+      213: -5327983122026873613
+    second: fnt_click.old_39
+  - first:
+      213: 8485774925413381570
+    second: fnt_click.old_40
+  - first:
+      213: -3323726625368335628
+    second: fnt_click.old_41
+  - first:
+      213: -4331058741886893142
+    second: fnt_click.old_42
+  - first:
+      213: 7658418089217636242
+    second: fnt_click.old_43
+  - first:
+      213: 5888956711927049799
+    second: fnt_click.old_44
+  - first:
+      213: 2914330324902914734
+    second: fnt_click.old_45
+  - first:
+      213: -1270075477436867366
+    second: fnt_click.old_46
+  - first:
+      213: -3478521545640394775
+    second: fnt_click.old_47
+  - first:
+      213: 5016989205901888695
+    second: fnt_click.old_48
+  - first:
+      213: -7642387741140234803
+    second: fnt_click.old_49
+  - first:
+      213: 7049288807416524572
+    second: fnt_click.old_50
+  - first:
+      213: 2864176708547542761
+    second: fnt_click.old_51
+  - first:
+      213: -942462639684937183
+    second: fnt_click.old_52
+  - first:
+      213: 1069639065072874629
+    second: fnt_click.old_53
+  - first:
+      213: 7905764777915592514
+    second: fnt_click.old_54
+  - first:
+      213: 5200690530556737686
+    second: fnt_click.old_55
+  - first:
+      213: 4952608356098404229
+    second: fnt_click.old_56
+  - first:
+      213: 1580840923582860633
+    second: fnt_click.old_57
+  - first:
+      213: -8558644852762928529
+    second: fnt_click.old_58
+  - first:
+      213: -3963098006638421822
+    second: fnt_click.old_59
+  - first:
+      213: 4459852643357403332
+    second: fnt_click.old_60
+  - first:
+      213: 2909001799882929368
+    second: fnt_click.old_61
+  - first:
+      213: -7871288539990400395
+    second: fnt_click.old_62
+  - first:
+      213: -1223747641357269328
+    second: fnt_click.old_63
+  - first:
+      213: 1731656781359483180
+    second: fnt_click.old_64
+  - first:
+      213: 1453224324646781588
+    second: fnt_click.old_65
+  - first:
+      213: -7853171446512842931
+    second: fnt_click.old_66
+  - first:
+      213: 1076257526862485799
+    second: fnt_click.old_67
+  - first:
+      213: 2218335653355369799
+    second: fnt_click.old_68
+  - first:
+      213: 4217680562237353911
+    second: fnt_click.old_69
+  - first:
+      213: 670286918216056181
+    second: fnt_click.old_70
+  - first:
+      213: -5663052453357223855
+    second: fnt_click.old_71
+  - first:
+      213: 4897175965289895713
+    second: fnt_click.old_72
+  - first:
+      213: 5726913269839681920
+    second: fnt_click.old_73
+  - first:
+      213: -8560488500715175293
+    second: fnt_click.old_74
+  - first:
+      213: -6190859130717421056
+    second: fnt_click.old_75
+  - first:
+      213: 2228741780064682893
+    second: fnt_click.old_76
+  - first:
+      213: -1451547259178876485
+    second: fnt_click.old_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fnt_click.old_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 109
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1345df1100fd98cf0800000000000000
+      internalID: -249423112947542991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 109
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da97fa9f2f7d4590800000000000000
+      internalID: -7688349146411459880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 109
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780f8345ac3454e10800000000000000
+      internalID: 2181224130806345863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 109
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4d3f78a09832960800000000000000
+      internalID: 7576049676490888427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 107
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43130d75fd4834b0800000000000000
+      internalID: -5460528831427046582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 114
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81b8f24392a05870800000000000000
+      internalID: 8669608036055691658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_6
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 106
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9abef87051711b0800000000000000
+      internalID: -5686052882308421137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 106
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd2f8feffe8c5ca0800000000000000
+      internalID: -6026784971441623555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 109
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14aee9fd7587d8070800000000000000
+      internalID: 8110270822773353025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 109
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48eddbb52e68830c0800000000000000
+      internalID: -4595775112971690364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_10
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 109
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfab3c7006ad4af0800000000000000
+      internalID: -410489470006349877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_11
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 109
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47cad8aee338cad0800000000000000
+      internalID: -2681836477970987185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 109
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd01cb126039407a0800000000000000
+      internalID: -6411838314923683621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_13
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 109
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6898ad58beebc60800000000000000
+      internalID: 7835959361800865459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_14
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 109
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9de430093c20b10800000000000000
+      internalID: 1946333012275681732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_15
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 109
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cc434558f0b0da0800000000000000
+      internalID: -5977667015086388185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_16
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 109
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7867c20a9705d80800000000000000
+      internalID: -8263971587377166378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_17
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 106
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752a0023f858af5b0800000000000000
+      internalID: -5333803958601211305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_18
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 106
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4560ccd34c17880800000000000000
+      internalID: -8614888842488032059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_19
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 106
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f281693c6193dee10800000000000000
+      internalID: 2228500160551721007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_20
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 107
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f687624470eb8260800000000000000
+      internalID: 7101016027414628088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_21
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 109
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029b80d7f3e10b1c0800000000000000
+      internalID: -4490055570458887904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_22
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 84
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26499b76e3fbc84f0800000000000000
+      internalID: -825074356966550430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_23
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 87
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c574fa9735c72e0800000000000000
+      internalID: -2126733141928879101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_24
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 87
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a8c5a6e244706f0800000000000000
+      internalID: -718530649398670803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 87
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b647751a3fc8257d0800000000000000
+      internalID: -2931125429452966805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_26
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 87
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc55f9e9679211d90800000000000000
+      internalID: -7128871145706662451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 87
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48754f94c659fe050800000000000000
+      internalID: 5832044334797838212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_28
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 87
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 442749ede63ab9930800000000000000
+      internalID: 4151091178128044612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 87
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38fbf33321bb7af0800000000000000
+      internalID: -397529377338034115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 84
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b8b64ed25461a70800000000000000
+      internalID: 8797294985522940741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_31
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 84
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519fd32dbcfebdc60800000000000000
+      internalID: 7844126834680527125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 87
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e75585625bf6a530800000000000000
+      internalID: 3866053661453277154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_33
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 87
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d868dfe418879de0800000000000000
+      internalID: -1326441941732661036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_34
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 87
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99f68f94de919080800000000000000
+      internalID: -9182383529185052260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_35
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 87
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f7029c8e088ccd0800000000000000
+      internalID: -2537636652728156288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_36
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 84
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d4b6b2a469592580800000000000000
+      internalID: -8851445303858514735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_37
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 87
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d1e90997ca88b00800000000000000
+      internalID: 831103769367158157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_38
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 87
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a638cb790c38430800000000000000
+      internalID: 3784079869856672388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_39
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 87
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcbf4254933f06b0800000000000000
+      internalID: -5327983122026873613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_40
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 87
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c57e29c55783c570800000000000000
+      internalID: 8485774925413381570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 84
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa996c7e30cfd1d0800000000000000
+      internalID: -3323726625368335628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_42
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 84
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa34b7c650df4e3c0800000000000000
+      internalID: -4331058741886893142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_43
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 87
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2973e351daa284a60800000000000000
+      internalID: 7658418089217636242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_44
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 87
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e6010bde6c9b150800000000000000
+      internalID: 5888956711927049799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_45
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 87
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaaacfd5df7c17820800000000000000
+      internalID: 2914330324902914734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_46
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 84
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcd0791519cf5ee0800000000000000
+      internalID: -1270075477436867366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_47
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 62
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efbf80951fc9bfc0800000000000000
+      internalID: -3478521545640394775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_48
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 65
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc40c30a1def9540800000000000000
+      internalID: 5016989205901888695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_49
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 63
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd498d27d8c0f590800000000000000
+      internalID: -7642387741140234803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_50
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 63
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1fe23552da14d160800000000000000
+      internalID: 7049288807416524572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 65
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee7ce69a899fb720800000000000000
+      internalID: 2864176708547542761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_52
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 69
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a908bf833bbe2f0800000000000000
+      internalID: -942462639684937183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_53
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 64
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584bc8fff0f18de00800000000000000
+      internalID: 1069639065072874629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_54
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 64
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f2471dd2be6bd60800000000000000
+      internalID: 7905764777915592514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_55
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 65
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698729cab709c2840800000000000000
+      internalID: 5200690530556737686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_56
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 65
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f60e05f033bb440800000000000000
+      internalID: 4952608356098404229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_57
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 65
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d8e80c17640f510800000000000000
+      internalID: 1580840923582860633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_58
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 62
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a17502ad5993980800000000000000
+      internalID: -8558644852762928529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_59
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c812404c5f3009c0800000000000000
+      internalID: -3963098006638421822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_60
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 65
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8a7ed895494ed30800000000000000
+      internalID: 4459852643357403332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_61
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d47ef479b9de5820800000000000000
+      internalID: 2909001799882929368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_62
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 65
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572e449d6c093c290800000000000000
+      internalID: -7871288539990400395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_63
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 62
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b68d2ef000640fe0800000000000000
+      internalID: -1223747641357269328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 65
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2904ddfaa4180810800000000000000
+      internalID: 1731656781359483180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_65
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 65
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4924781e2d3ea2410800000000000000
+      internalID: 1453224324646781588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_66
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d478c526d2ee30390800000000000000
+      internalID: -7853171446512842931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_67
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7299a77b482afee00800000000000000
+      internalID: 1076257526862485799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_68
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 65
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745b4d2068c19ce10800000000000000
+      internalID: 2218335653355369799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_69
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 65
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf2a380026388a30800000000000000
+      internalID: 4217680562237353911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_70
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 65
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dfbd996665d4900800000000000000
+      internalID: 670286918216056181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_71
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 43
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1500d3d3ccbc861b0800000000000000
+      internalID: -5663052453357223855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_72
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 40
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1275fa5189346f340800000000000000
+      internalID: 4897175965289895713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_73
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 43
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089d344c6451a7f40800000000000000
+      internalID: 5726913269839681920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_74
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 44
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3824e036019033980800000000000000
+      internalID: -8560488500715175293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_75
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 44
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 002ca13db66a51aa0800000000000000
+      internalID: -6190859130717421056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_76
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 40
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83c3d037d41eee10800000000000000
+      internalID: 2228741780064682893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fnt_click.old_77
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 41
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb183f955711bdbe0800000000000000
+      internalID: -1451547259178876485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fnt_click.old_0: -249423112947542991
+      fnt_click.old_1: -7688349146411459880
+      fnt_click.old_10: -410489470006349877
+      fnt_click.old_11: -2681836477970987185
+      fnt_click.old_12: -6411838314923683621
+      fnt_click.old_13: 7835959361800865459
+      fnt_click.old_14: 1946333012275681732
+      fnt_click.old_15: -5977667015086388185
+      fnt_click.old_16: -8263971587377166378
+      fnt_click.old_17: -5333803958601211305
+      fnt_click.old_18: -8614888842488032059
+      fnt_click.old_19: 2228500160551721007
+      fnt_click.old_2: 2181224130806345863
+      fnt_click.old_20: 7101016027414628088
+      fnt_click.old_21: -4490055570458887904
+      fnt_click.old_22: -825074356966550430
+      fnt_click.old_23: -2126733141928879101
+      fnt_click.old_24: -718530649398670803
+      fnt_click.old_25: -2931125429452966805
+      fnt_click.old_26: -7128871145706662451
+      fnt_click.old_27: 5832044334797838212
+      fnt_click.old_28: 4151091178128044612
+      fnt_click.old_29: -397529377338034115
+      fnt_click.old_3: 7576049676490888427
+      fnt_click.old_30: 8797294985522940741
+      fnt_click.old_31: 7844126834680527125
+      fnt_click.old_32: 3866053661453277154
+      fnt_click.old_33: -1326441941732661036
+      fnt_click.old_34: -9182383529185052260
+      fnt_click.old_35: -2537636652728156288
+      fnt_click.old_36: -8851445303858514735
+      fnt_click.old_37: 831103769367158157
+      fnt_click.old_38: 3784079869856672388
+      fnt_click.old_39: -5327983122026873613
+      fnt_click.old_4: -5460528831427046582
+      fnt_click.old_40: 8485774925413381570
+      fnt_click.old_41: -3323726625368335628
+      fnt_click.old_42: -4331058741886893142
+      fnt_click.old_43: 7658418089217636242
+      fnt_click.old_44: 5888956711927049799
+      fnt_click.old_45: 2914330324902914734
+      fnt_click.old_46: -1270075477436867366
+      fnt_click.old_47: -3478521545640394775
+      fnt_click.old_48: 5016989205901888695
+      fnt_click.old_49: -7642387741140234803
+      fnt_click.old_5: 8669608036055691658
+      fnt_click.old_50: 7049288807416524572
+      fnt_click.old_51: 2864176708547542761
+      fnt_click.old_52: -942462639684937183
+      fnt_click.old_53: 1069639065072874629
+      fnt_click.old_54: 7905764777915592514
+      fnt_click.old_55: 5200690530556737686
+      fnt_click.old_56: 4952608356098404229
+      fnt_click.old_57: 1580840923582860633
+      fnt_click.old_58: -8558644852762928529
+      fnt_click.old_59: -3963098006638421822
+      fnt_click.old_6: -5686052882308421137
+      fnt_click.old_60: 4459852643357403332
+      fnt_click.old_61: 2909001799882929368
+      fnt_click.old_62: -7871288539990400395
+      fnt_click.old_63: -1223747641357269328
+      fnt_click.old_64: 1731656781359483180
+      fnt_click.old_65: 1453224324646781588
+      fnt_click.old_66: -7853171446512842931
+      fnt_click.old_67: 1076257526862485799
+      fnt_click.old_68: 2218335653355369799
+      fnt_click.old_69: 4217680562237353911
+      fnt_click.old_7: -6026784971441623555
+      fnt_click.old_70: 670286918216056181
+      fnt_click.old_71: -5663052453357223855
+      fnt_click.old_72: 4897175965289895713
+      fnt_click.old_73: 5726913269839681920
+      fnt_click.old_74: -8560488500715175293
+      fnt_click.old_75: -6190859130717421056
+      fnt_click.old_76: 2228741780064682893
+      fnt_click.old_77: -1451547259178876485
+      fnt_click.old_8: 8110270822773353025
+      fnt_click.old_9: -4595775112971690364
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
